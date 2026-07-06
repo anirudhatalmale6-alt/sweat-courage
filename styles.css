@@ -137,7 +137,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 520px;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
@@ -253,7 +253,7 @@ img { max-width: 100%; display: block; }
 
 .hero-image {
   position: relative;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2520 40%, #1d1915 100%);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
@@ -887,8 +887,22 @@ img { max-width: 100%; display: block; }
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: 1;
 }
 .hero-image::after { display: none; }
+/* Fade the photo's left edge into the black content column so there is no seam/line */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    var(--bg-primary) 0%,
+    rgba(10,10,10,0.75) 12%,
+    rgba(10,10,10,0.25) 30%,
+    transparent 50%);
+}
 
 .develop-card-image img {
   position: absolute;
