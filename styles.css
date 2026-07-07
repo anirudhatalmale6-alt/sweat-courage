@@ -1486,3 +1486,61 @@ img { max-width: 100%; display: block; }
   .cs-3grid { grid-template-columns: 1fr; max-width: 420px; }
   .cs-body p { font-size: 16px; }
 }
+
+/* ===== WORK WITH US PAGE ===== */
+.wwu-grid { grid-template-columns: repeat(3, 1fr); }
+.wwu-contact {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  max-width: 1080px;
+  margin: 0 auto;
+  align-items: start;
+}
+.wwu-contact-intro h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 4.5vw, 46px);
+  letter-spacing: 0.015em;
+  color: var(--text-white);
+  margin-bottom: 18px;
+}
+.wwu-contact-intro p { font-size: 17px; line-height: 1.75; color: var(--text-light); }
+
+.wwu-form { display: flex; flex-direction: column; gap: 20px; }
+.wwu-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.wwu-field { display: flex; flex-direction: column; }
+.wwu-field label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+.wwu-field label span { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
+.wwu-field input,
+.wwu-field select,
+.wwu-field textarea {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+.wwu-field textarea { resize: vertical; }
+.wwu-field input:focus,
+.wwu-field select:focus,
+.wwu-field textarea:focus { border-color: rgba(200,150,46,0.55); }
+.wwu-form .btn-gold { align-self: flex-start; border: none; }
+
+@media (max-width: 900px) { .wwu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .wwu-contact { grid-template-columns: 1fr; gap: 32px; }
+  .wwu-field-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .wwu-grid { grid-template-columns: 1fr; max-width: 420px; } }
