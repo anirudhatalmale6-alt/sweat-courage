@@ -117,19 +117,26 @@ img { max-width: 100%; display: block; }
 .nav-mobile-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   cursor: pointer;
-  background: none;
+  background: var(--gold);
   border: none;
-  padding: 5px;
+  padding: 11px 10px;
+  width: 42px;
+  height: 38px;
+  box-sizing: border-box;
 }
 .nav-mobile-toggle span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
-  background: var(--text-white);
+  background: var(--bg-primary);
   transition: 0.3s;
 }
+
+/* CTA shown inside the mobile dropdown menu (hidden on desktop) */
+.nav-cta-mobile { display: none; }
 
 /* ===== HERO ===== */
 .hero {
@@ -843,6 +850,12 @@ img { max-width: 100%; display: block; }
   .nav-links { display: none; }
   .nav-mobile-toggle { display: flex; }
   .nav-inner { height: 60px; }
+  /* Shrink the wordmark so it never overflows / crowds the menu button */
+  .nav-logo { font-size: 13px; letter-spacing: 0.22em; }
+  /* Hide the standalone top-bar CTA; it now lives inside the dropdown */
+  .nav-inner > .nav-cta { display: none; }
+  /* Show the gold CTA box inside the opened dropdown menu */
+  .nav-cta-mobile { display: block; text-align: center; margin-top: 6px; }
 
   .hero { margin-top: 60px; }
   .hero-content { padding: 36px 24px; }
