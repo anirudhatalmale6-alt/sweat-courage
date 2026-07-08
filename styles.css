@@ -1544,3 +1544,84 @@ img { max-width: 100%; display: block; }
   .wwu-field-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) { .wwu-grid { grid-template-columns: 1fr; max-width: 420px; } }
+
+/* ============ CASE STUDY MEDIA (photos, video, galleries) ============ */
+.cs-media { max-width: 900px; margin: 44px auto 0; }
+.cs-media.wide { max-width: 1040px; }
+.cs-figure { margin: 0; }
+.cs-figure img,
+.cs-video video {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background: #000;
+}
+.cs-video { position: relative; }
+.cs-video video { aspect-ratio: 16 / 9; object-fit: cover; }
+.cs-video.portrait video { aspect-ratio: auto; max-height: 640px; object-fit: contain; }
+.cs-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #000;
+}
+.cs-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cs-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 14px;
+  letter-spacing: 0.02em;
+}
+.cs-hero-photo { max-width: 1000px; margin: 40px auto 0; }
+.cs-hero-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.cs-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+.cs-gallery.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 620px; margin-left: auto; margin-right: auto; }
+.cs-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+@media (max-width: 860px) {
+  .cs-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .cs-gallery.cols-2 { grid-template-columns: 1fr; max-width: 320px; }
+}
+
+/* linked video thumbnail (opens external interview) */
+.cs-videolink {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.cs-videolink img { width: 100%; display: block; transition: transform 0.5s ease; }
+.cs-videolink::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.18);
+  transition: background 0.3s;
+}
+.cs-videolink:hover::after { background: rgba(0,0,0,0.02); }
+.cs-videolink:hover img { transform: scale(1.03); }
