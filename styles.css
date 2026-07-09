@@ -610,22 +610,26 @@ img { max-width: 100%; display: block; }
   color: var(--text-light);
 }
 
+.trusted-band {
+  background: #fff;
+  padding: 34px 24px;
+}
+
 .trusted-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 44px;
   flex-wrap: wrap;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .trusted-logo {
-  height: 82px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 22px;
-  background: #fff;
-  border-radius: 10px;
   opacity: 0.92;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -635,7 +639,7 @@ img { max-width: 100%; display: block; }
 .trusted-logo img {
   height: 100%;
   width: auto;
-  max-width: 200px;
+  max-width: 190px;
   object-fit: contain;
   display: block;
 }
@@ -866,9 +870,10 @@ img { max-width: 100%; display: block; }
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .trusted-logos { gap: 16px; }
-  .trusted-logo { height: 62px; padding: 10px 16px; }
-  .trusted-logo img { max-width: 150px; }
+  .trusted-band { padding: 26px 18px; }
+  .trusted-logos { gap: 26px; }
+  .trusted-logo { height: 44px; }
+  .trusted-logo img { max-width: 130px; }
 }
 
 @media (max-width: 480px) {
