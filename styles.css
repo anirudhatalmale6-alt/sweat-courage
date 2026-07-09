@@ -1737,7 +1737,10 @@ img { max-width: 100%; display: block; }
   margin-top: 18px;
 }
 .emp-hero-line span { color: var(--gold); }
-.page-hero .hero-buttons { margin-top: 34px; }
+.page-hero .hero-buttons { margin-top: 34px; justify-content: center; }
+.emp-hero-logo { max-width: 480px; margin: 26px auto 4px; }
+.emp-hero-logo img { width: 100%; height: auto; display: block; }
+@media (max-width: 600px) { .emp-hero-logo { max-width: 100%; } }
 
 .emp-chip-grid {
   display: flex;
