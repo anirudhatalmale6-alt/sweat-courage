@@ -1675,3 +1675,46 @@ img { max-width: 100%; display: block; }
 @media (max-width: 600px) {
   .video-modal-close { top: -44px; }
 }
+
+/* ===== IMPACT / FLAIR PARTNERSHIP FOLD ===== */
+.impact-partner {
+  padding: 90px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+}
+.impact-partner-logo {
+  max-width: 620px;
+  margin: 0 auto 44px;
+}
+.impact-partner-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.impact-partner-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  color: var(--text-white);
+  margin-bottom: 26px;
+}
+.impact-partner-text {
+  max-width: 680px;
+  margin: 0 auto 34px;
+}
+.impact-partner-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+.impact-partner-text p:last-child { margin-bottom: 0; }
+.impact-partner-btn { justify-content: center; }
+
+@media (max-width: 767px) {
+  .impact-partner { padding: 60px 0; }
+  .impact-partner-logo { max-width: 100%; margin-bottom: 34px; }
+  .impact-partner-text p { font-size: 14px; }
+}
