@@ -614,39 +614,30 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .trusted-logo {
-  height: 40px;
+  height: 82px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 12px;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+  padding: 14px 22px;
+  background: #fff;
+  border-radius: 10px;
+  opacity: 0.92;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
-.trusted-logo:hover { opacity: 1; }
+.trusted-logo:hover { opacity: 1; transform: translateY(-3px); }
 
-.trusted-logo span {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--text-light);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.trusted-logo .logo-accent {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: none;
+.trusted-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
 }
 
 /* ===== FOUNDER ===== */
@@ -875,8 +866,9 @@ img { max-width: 100%; display: block; }
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .trusted-logos { gap: 20px; }
-  .trusted-logo span { font-size: 10px; }
+  .trusted-logos { gap: 16px; }
+  .trusted-logo { height: 62px; padding: 10px 16px; }
+  .trusted-logo img { max-width: 150px; }
 }
 
 @media (max-width: 480px) {
@@ -1625,3 +1617,61 @@ img { max-width: 100%; display: block; }
 }
 .cs-videolink:hover::after { background: rgba(0,0,0,0.02); }
 .cs-videolink:hover img { transform: scale(1.03); }
+
+/* ===== VIDEO MODAL (Watch Drewe's Story) ===== */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.video-modal.open { display: flex; opacity: 1; }
+.video-modal-inner {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+  transform: scale(0.96);
+  transition: transform 0.3s ease;
+}
+.video-modal.open .video-modal-inner { transform: scale(1); }
+.video-modal-inner iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-modal-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+.video-modal-close:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 600px) {
+  .video-modal-close { top: -44px; }
+}

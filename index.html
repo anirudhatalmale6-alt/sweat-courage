@@ -44,7 +44,7 @@
  thrive under pressure and lead others.</p>
     <div class="hero-buttons">
       <a href="framework.html" class="btn-gold">Explore the Framework <span>→</span></a>
-      <a href="#" class="btn-outline">
+      <a href="#" class="btn-outline" onclick="openVideo(event)">
         <span class="play-icon"><svg viewBox="0 0 12 12"><polygon points="3,1 10,6 3,11"></polygon></svg></span>
         Watch Drewe's Story
       </a>
@@ -73,8 +73,8 @@
       <div class="belief-text">
         <p>Every day we choose between comfort and Sweat.</p>
         <p>Every day we choose between fear and Courage.</p>
-        <p>Every choice shapes the human being.<br>
-        Every human being <span class="underline-gold">shapes performance</span>.</p>
+        <p>Every choice shapes the human being.</p>
+        <p>Every human being <span class="underline-gold">shapes performance</span>.</p>
       </div>
       <div class="belief-cards">
         <div class="belief-card">
@@ -212,13 +212,12 @@
   <div class="container">
     <h3>Trusted by Leading Organisations</h3>
     <div class="trusted-logos">
-      <div class="trusted-logo"><span>The FA</span></div>
-      <div class="trusted-logo"><span>PFA | Business School</span></div>
-      <div class="trusted-logo"><span>US Club Soccer</span></div>
-      <div class="trusted-logo"><span>Cornell University</span></div>
-      <div class="trusted-logo"><span><span class="logo-accent">P</span>&nbsp; Purdue University</span></div>
-      <div class="trusted-logo"><span>Miller Insurance</span></div>
-      <div class="trusted-logo"><span>Southampton FC</span></div>
+      <div class="trusted-logo"><img src="images/trusted/pfa.png" alt="Professional Footballers' Association"></div>
+      <div class="trusted-logo"><img src="images/trusted/cavalry.png" alt="Cavalry FC"></div>
+      <div class="trusted-logo"><img src="images/trusted/lexington.png" alt="Lexington SC"></div>
+      <div class="trusted-logo"><img src="images/trusted/purdue.png" alt="Purdue University"></div>
+      <div class="trusted-logo"><img src="images/trusted/susa.png" alt="SUSA FC Long Island"></div>
+      <div class="trusted-logo"><img src="images/trusted/miller.png" alt="Miller"></div>
     </div>
   </div>
 </section>
@@ -240,7 +239,7 @@ performers. Sweat &amp; Courage was born in the darkest season of my own
  life. Today it has become a framework used inside professional 
 football, universities and leadership environments.</p>
     <div class="founder-bottom">
-      <a href="#" class="btn-outline-play">
+      <a href="#" class="btn-outline-play" onclick="openVideo(event)">
         Watch My Story
         <span class="play-icon"><svg viewBox="0 0 12 12"><polygon points="3,1 10,6 3,11" fill="currentColor"></polygon></svg></span>
       </a>
@@ -264,5 +263,36 @@ football, universities and leadership environments.</p>
     </div>
   </div>
 </section>
+
+<!-- ===== VIDEO MODAL ===== -->
+<div class="video-modal" id="videoModal" onclick="closeVideo(event)">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" aria-label="Close" onclick="closeVideo(event)">&times;</button>
+    <iframe id="videoFrame" src="" title="Drewe's Story" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  var WISTIA_SRC = "https://fast.wistia.net/embed/iframe/2tpbcw9e24?autoPlay=true";
+  function openVideo(e) {
+    if (e) e.preventDefault();
+    var modal = document.getElementById('videoModal');
+    document.getElementById('videoFrame').src = WISTIA_SRC;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideo(e) {
+    // when clicking inside the video area (not the backdrop or close button), do nothing
+    if (e && e.target.closest('.video-modal-inner') && !e.target.closest('.video-modal-close')) return;
+    if (e) e.preventDefault();
+    var modal = document.getElementById('videoModal');
+    modal.classList.remove('open');
+    document.getElementById('videoFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeVideo();
+  });
+</script>
 
 </body></html>
