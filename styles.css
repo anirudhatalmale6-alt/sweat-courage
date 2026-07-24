@@ -1955,3 +1955,75 @@ img { max-width: 100%; display: block; }
   .partner-hero-btns { flex-direction: column; }
   .partner-hero-btns .btn-gold, .partner-hero-btns .btn-outline { width: 100%; max-width: 320px; }
 }
+
+/* ============ TEAM PAGE ============ */
+.team-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.team-member {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 40px 44px;
+  transition: border-color 0.3s;
+}
+.team-member:hover { border-color: rgba(200,150,46,0.35); }
+.team-info .team-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: 0.015em;
+  line-height: 1.02;
+  color: var(--text-white);
+  margin-bottom: 6px;
+}
+.team-info .team-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.team-info p { color: var(--text-light); font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+.team-info p:last-child { margin-bottom: 0; }
+.team-photo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}
+.team-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team-form-wrap { max-width: 720px; margin: 0 auto; }
+.team-form-wrap .about-head { margin-bottom: 14px; }
+.team-form-intro {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+.team-form .btn-gold { align-self: center; }
+
+@media (max-width: 768px) {
+  .team-member { grid-template-columns: 1fr; gap: 26px; padding: 30px 26px; }
+  .team-photo { order: -1; max-width: 300px; margin: 0 auto; width: 100%; }
+  .team-info p { font-size: 15px; }
+}

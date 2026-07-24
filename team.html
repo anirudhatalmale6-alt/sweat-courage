@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweat &amp; Courage | The Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Sweat &amp; Courage"></a>
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="team.html" class="active">TEAM</a></li>
+      <li><a href="framework.html">FRAMEWORK</a></li>
+      <li><a href="who-we-help.html">WHO WE HELP</a></li>
+      <li><a href="insights.html">INSIGHTS</a></li>
+      <li><a href="results.html">RESULTS</a></li>
+      <li class="nav-cta-mobile-item"><a href="work-with-us.html" class="nav-cta nav-cta-mobile">WORK WITH US</a></li>
+    </ul>
+    <a href="work-with-us.html" class="nav-cta">WORK WITH US</a>
+    <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="page-hero">
+  <p class="page-label">The Team</p>
+  <h1>The People Behind <span class="gold">the Work.</span></h1>
+  <div class="hero-bar"></div>
+  <p class="page-intro">Behind every programme is a team committed to developing people. Meet the coaches and facilitators helping players, parents and leaders know themselves under pressure.</p>
+</section>
+
+<!-- ===== TEAM MEMBERS ===== -->
+<section class="about-section">
+  <div class="container">
+    <div class="team-list">
+
+      <!-- Drewe -->
+      <div class="team-member">
+        <div class="team-info">
+          <h2 class="team-name">Drewe Broughton</h2>
+          <p class="team-role">Founder &amp; Performance Coach</p>
+          <p>Drewe spent almost 20 years as a professional footballer, playing for more than a dozen clubs after leaving home at 16. Behind the results was a private battle with fear, identity and the pressure to perform &mdash; the experience that shaped everything Sweat &amp; Courage stands for today.</p>
+          <p>Now a performance coach, Drewe works with athletes, leaders and organisations to help them perform under pressure without losing themselves, using the VASC Method he built from his own journey.</p>
+        </div>
+        <div class="team-photo">
+          <img src="images/team/drewe.jpg" alt="Drewe Broughton">
+        </div>
+      </div>
+
+      <!-- Ben -->
+      <div class="team-member">
+        <div class="team-info">
+          <h2 class="team-name">Ben</h2>
+          <p class="team-role">Coach &amp; Facilitator</p>
+          <p>Ben works alongside players, coaches and organisations to embed the Sweat &amp; Courage Framework in everyday performance environments, helping people build the self-awareness and standards to lead themselves and others.</p>
+        </div>
+        <div class="team-photo">
+          <img src="images/team/ben.jpg" alt="Ben">
+        </div>
+      </div>
+
+      <!-- Lucy -->
+      <div class="team-member">
+        <div class="team-info">
+          <h2 class="team-name">Lucy</h2>
+          <p class="team-role">Coach &amp; Facilitator</p>
+          <p>Lucy supports individuals and teams through the human side of performance &mdash; developing the courage, honesty and resilience that allow people to thrive under pressure and grow beyond the result.</p>
+        </div>
+        <div class="team-photo">
+          <img src="images/team/lucy.jpg" alt="Lucy">
+        </div>
+      </div>
+
+      <!-- Ashley -->
+      <div class="team-member">
+        <div class="team-info">
+          <h2 class="team-name">Ashley</h2>
+          <p class="team-role">Coach &amp; Facilitator</p>
+          <p>Ashley helps players, parents and communities apply the Sweat &amp; Courage principles in real life, creating environments where people can perform, develop and support one another honestly.</p>
+        </div>
+        <div class="team-photo">
+          <img src="images/team/ashley.jpg" alt="Ashley">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== REQUEST A SESSION (shared form) ===== -->
+<section class="about-section alt">
+  <div class="container">
+    <div class="team-form-wrap">
+      <div class="about-head">
+        <p class="section-label">Get in Touch</p>
+        <h2>Request a Session.</h2>
+      </div>
+      <p class="team-form-intro">Tell us a little about you and what you're looking for, and one of the team will be in touch.</p>
+      <form class="wwu-form team-form" onsubmit="return false;">
+        <div class="wwu-field-row">
+          <div class="wwu-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="wwu-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="wwu-field">
+          <label for="phone">Phone <span>(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="Your number">
+        </div>
+        <div class="wwu-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for&hellip;"></textarea>
+        </div>
+        <button type="submit" class="btn-gold">REQUEST A SESSION <span>&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body></html>
