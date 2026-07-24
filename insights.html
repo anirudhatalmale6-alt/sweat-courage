@@ -90,8 +90,13 @@
       <p class="section-label">Stay Connected</p>
       <h2>The Sweat &amp; Courage Newsletter.</h2>
       <p class="newsletter-desc">Ideas that challenge how we think about performance &mdash; delivered straight to your inbox. Join coaches, leaders and organisations continuing the work long after the session ends.</p>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+      <form class="newsletter-form" action="https://formsubmit.co/gmorgan4807@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Newsletter Signup - Sweat & Courage">
+        <input type="hidden" name="_next" value="https://sweatandcourage.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="email" name="email" placeholder="Enter your email address" aria-label="Email address" required>
         <button type="submit" class="nav-cta">SUBSCRIBE</button>
       </form>
     </div>
