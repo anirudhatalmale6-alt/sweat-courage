@@ -1821,8 +1821,9 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 .partner-lockup {
-  max-width: 500px;
-  margin: 0 auto 40px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 44px;
 }
 .partner-lockup img { width: 100%; height: auto; display: block; }
 
@@ -1854,7 +1855,7 @@ img { max-width: 100%; display: block; }
 
 .partner-options { padding: 70px 0; background: var(--bg-secondary); }
 .partner-options .about-head { text-align: center; }
-.partner-options .page-intro { margin: 0 auto 40px; }
+.partner-options .page-intro { margin: 0 auto 40px; text-align: center; }
 .partner-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
