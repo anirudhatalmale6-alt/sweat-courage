@@ -1858,6 +1858,11 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.14em;
   padding: 22px 48px;
 }
+.partner-download-cta {
+  background: var(--bg-primary);
+  text-align: center;
+  padding: 0 0 70px;
+}
 
 .partner-options { padding: 70px 0; background: var(--bg-secondary); }
 .partner-options .about-head { text-align: center; }
