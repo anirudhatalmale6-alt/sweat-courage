@@ -1961,7 +1961,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 760px) {
   .partner-hero { padding: 46px 0 44px; }
-  .partner-lockup { max-width: 82%; margin-bottom: 30px; }
+  .partner-lockup { max-width: 94%; margin-bottom: 30px; }
   .partner-cards { grid-template-columns: 1fr; max-width: 360px; gap: 18px; }
   .partner-cards.cards-2 { grid-template-columns: 1fr; max-width: 360px; }
   .partner-hero-btns { flex-direction: column; }
