@@ -2067,6 +2067,24 @@ img { max-width: 100%; display: block; }
 }
 .team-form .btn-gold { align-self: center; }
 #request { scroll-margin-top: 90px; }
+#contact { scroll-margin-top: 90px; }
+
+/* Individual coach profile pages */
+.profile-back {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.profile-back:hover { color: var(--gold); }
+a.team-photo { display: block; text-decoration: none; }
 
 /* ===== TEAM PRICING ===== */
 .team-pricing-section { padding-top: 0; }

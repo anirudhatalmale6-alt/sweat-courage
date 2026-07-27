@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweat &amp; Courage | Lucy Staniforth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="Sweat &amp; Courage"></a>
+    <ul class="nav-links">
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../team.html" class="active">TEAM</a></li>
+      <li><a href="../framework.html">FRAMEWORK</a></li>
+      <li><a href="../who-we-help.html">WHO WE HELP</a></li>
+      <li><a href="../insights.html">INSIGHTS</a></li>
+      <li><a href="../results.html">RESULTS</a></li>
+      <li class="nav-cta-mobile-item"><a href="../work-with-us.html" class="nav-cta nav-cta-mobile">WORK WITH US</a></li>
+    </ul>
+    <a href="../work-with-us.html" class="nav-cta">WORK WITH US</a>
+    <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PROFILE ===== -->
+<section class="about-section profile-section">
+  <div class="container">
+    <a href="../team.html" class="profile-back">&larr; Back to the Team</a>
+    <div class="team-list">
+      <div class="team-member">
+        <div class="team-info">
+          <h2 class="team-name">Lucy Staniforth</h2>
+          <p class="team-role">Elite Performance Mentor</p>
+          <p class="team-cred">Former England International &middot; Former Lioness &middot; Emotional Intelligence Practitioner</p>
+          <p>Lucy Staniforth is a former England international midfielder with more than 15 years' experience competing at the highest level of the women's game. She represented clubs including Sunderland, Liverpool, Birmingham City, Manchester United and Aston Villa, winning the Women's Super League title and making more than 250 senior appearances across club competitions.</p>
+          <p>Internationally, Lucy earned 17 caps for England, scored twice for the Lionesses, represented England at the 2019 FIFA Women's World Cup, and was part of the squad that won the SheBelieves Cup. Today, Lucy combines her elite playing experience with a passion for helping athletes navigate confidence, identity, pressure and performance on and off the pitch.</p>
+          <div class="team-suited">
+            <p class="team-suited-label">Best suited for</p>
+            <ul class="team-tags">
+              <li>Female players</li><li>Identity</li><li>Confidence through authenticity</li><li>Emotional intelligence</li><li>Transition</li><li>Elite performance</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-gold team-req-btn">Get in Touch <span>&rarr;</span></a>
+        </div>
+        <div class="team-photo">
+          <img src="../images/team/lucy.jpg" alt="Lucy Staniforth">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GET IN TOUCH ===== -->
+<section class="about-section alt" id="contact">
+  <div class="container">
+    <div class="team-form-wrap">
+      <div class="about-head">
+        <p class="section-label">Get in Touch</p>
+        <h2>Work With Lucy.</h2>
+      </div>
+      <p class="team-form-intro">Leave your details below and we'll be in touch to arrange a session with Lucy.</p>
+      <form class="wwu-form team-form" action="https://formsubmit.co/gmorgan4807@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Session Request - Lucy Staniforth (Sweat &amp; Courage)">
+        <input type="hidden" name="_next" value="https://sweatandcourage.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="coach" value="Lucy Staniforth">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="wwu-field-row">
+          <div class="wwu-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="wwu-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="wwu-field">
+          <label for="phone">Phone <span>(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="Your number">
+        </div>
+        <div class="wwu-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for&hellip;"></textarea>
+        </div>
+        <button type="submit" class="btn-gold">GET IN TOUCH <span>&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body></html>
