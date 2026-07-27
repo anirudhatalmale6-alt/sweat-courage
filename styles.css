@@ -2085,6 +2085,25 @@ img { max-width: 100%; display: block; }
 }
 .profile-back:hover { color: var(--gold); }
 a.team-photo { display: block; text-decoration: none; }
+.profile-gallery {
+  max-width: 1000px;
+  margin: 46px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.profile-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  display: block;
+}
+@media (max-width: 700px) {
+  .profile-gallery { grid-template-columns: 1fr; max-width: 420px; gap: 16px; margin-top: 34px; }
+}
 
 /* ===== TEAM PRICING ===== */
 .team-pricing-section { padding-top: 0; }
