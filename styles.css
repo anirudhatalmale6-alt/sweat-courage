@@ -1897,6 +1897,7 @@ img { max-width: 100%; display: block; }
 }
 .partner-options .about-head { margin-bottom: 44px; }
 .step-block { max-width: 640px; margin: 84px auto 0; text-align: center; }
+.step-block-first { margin-top: 0; }
 .step-block .step-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(24px, 4vw, 32px);
