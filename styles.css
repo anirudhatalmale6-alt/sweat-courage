@@ -1888,29 +1888,34 @@ img { max-width: 100%; display: block; }
 /* App-access step guide */
 .step-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(30px, 5vw, 46px);
-  letter-spacing: 0.06em;
+  font-size: clamp(42px, 8vw, 64px);
+  letter-spacing: 0.05em;
   color: var(--gold);
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+  text-align: center;
 }
-.step-block { max-width: 720px; margin: 60px auto 0; text-align: center; }
+.partner-options .about-head { margin-bottom: 44px; }
+.step-block { max-width: 640px; margin: 84px auto 0; text-align: center; }
 .step-block .step-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: clamp(24px, 4vw, 32px);
   letter-spacing: 0.04em;
   color: var(--text-white);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
-.step-text { color: var(--text-light); font-size: 17px; line-height: 1.75; max-width: 620px; margin: 0 auto; }
+.step-text { color: var(--text-light); font-size: 17px; line-height: 1.75; max-width: 560px; margin: 0 auto; }
 .step-text strong { color: var(--text-white); }
-.store-badges { display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 28px; }
-.store-badges a { display: inline-block; transition: transform 0.2s ease; }
+.store-badges { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+.store-badges a { display: inline-flex; transition: transform 0.2s ease; }
 .store-badges a:hover { transform: translateY(-3px); }
-.store-badges img { height: 56px; width: auto; display: block; }
+.store-badges img { height: 52px; width: auto; display: block; }
 @media (max-width: 700px) {
-  .step-block { margin-top: 44px; }
-  .store-badges img { height: 50px; }
+  .step-num { margin-bottom: 4px; }
+  .partner-options .about-head { margin-bottom: 34px; }
+  .step-block { margin-top: 66px; }
+  .store-badges { gap: 14px; }
+  .store-badges img { height: 46px; }
 }
 
 .partner-qr {
