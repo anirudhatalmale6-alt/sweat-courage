@@ -2572,3 +2572,75 @@ a.team-photo { display: block; text-decoration: none; }
   .app-strip img { width: 165%; max-width: none; margin-left: -32%; }
   .app-band img { width: 200%; max-width: none; margin-left: -50%; }
 }
+
+/* --- PROOF fold moved to position 2: platform roster + photos (2026-09-14) --- */
+.trusted-intro {
+  max-width: 900px;
+  margin: 0 auto 6px;
+}
+
+.trusted-intro-lead {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 26px;
+}
+
+.trusted-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+
+.trusted-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.trusted-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.trusted-list li span {
+  color: var(--text-white);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.trusted-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1160px;
+  margin: 34px auto 0;
+}
+
+.trusted-photos figure { margin: 0; }
+
+.trusted-photos img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 6px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .trusted-photos { grid-template-columns: 1fr; max-width: 460px; gap: 16px; }
+  .trusted-photos img { height: 300px; }
+  .trusted-intro { padding: 0 4px; }
+}
