@@ -2855,21 +2855,6 @@ a.team-photo { display: block; text-decoration: none; }
   border-radius: 6px;
 }
 
-.store-badges {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 46px;
-}
-
-.store-badges img {
-  height: 52px;
-  width: auto;
-  display: block;
-}
-
 /* --- trusted partners: logos only --- */
 .partners {
   padding: 90px 0 0;
@@ -2890,5 +2875,4 @@ a.team-photo { display: block; text-decoration: none; }
   .delivery { padding: 70px 0 64px; }
   .delivery .sec-lead { margin-bottom: 40px; }
   .partners { padding: 70px 0 0; }
-  .store-badges img { height: 46px; }
 }
