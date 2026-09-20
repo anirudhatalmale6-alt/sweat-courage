@@ -2876,3 +2876,105 @@ a.team-photo { display: block; text-decoration: none; }
   .delivery .sec-lead { margin-bottom: 40px; }
   .partners { padding: 70px 0 0; }
 }
+
+/* --- v6 (2026-09-20): obvious folds, bigger fold headings, community logos --- */
+.fold-sep { border-top: 1px solid rgba(255,255,255,0.09); }
+
+.fold-rule {
+  width: 64px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0 auto 30px;
+}
+
+.bigfold-title {
+  font-size: clamp(54px, 9vw, 132px);
+  margin-bottom: 44px;
+}
+
+.bigfold { padding: 120px 0; }
+.problem { padding: 120px 0 110px; }
+.delivery { padding: 120px 0 110px; }
+.partners { padding: 110px 0 0; }
+
+.problem .bigfold-title,
+.delivery .bigfold-title { margin-bottom: 34px; }
+
+.partners .bigfold-title { margin-bottom: 50px; }
+
+/* the nav CTA now carries a long label - give it room on narrower desktops
+   (without this the menu and the gold button sit flush from ~1050px down) */
+@media (max-width: 1100px) and (min-width: 861px) {
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 11px; letter-spacing: 0.08em; }
+  .nav-inner > .nav-cta { font-size: 10px; padding: 9px 14px; letter-spacing: 0.07em; }
+}
+
+@media (max-width: 1010px) and (min-width: 861px) {
+  .nav { padding: 0 24px; }
+  .nav-logo img { height: 24px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.05em; }
+  .nav-inner > .nav-cta { font-size: 9px; padding: 8px 11px; letter-spacing: 0.05em; }
+}
+
+/* below 860px the four items plus the long gold button stop fitting side by
+   side, so hand over to the hamburger early rather than letting them touch */
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: flex; }
+  .nav-inner { height: 60px; }
+  .nav-logo img { height: 24px; }
+  .nav-inner > .nav-cta { display: none; }
+  .nav-cta-mobile { display: block; text-align: center; margin-top: 6px; }
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(10,10,10,0.98);
+    padding: 20px;
+    gap: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .hero { margin-top: 60px; }
+}
+
+/* the three community logos */
+.comm-grid { align-items: stretch; }
+
+.comm-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 46px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.comm-card:hover {
+  border-color: rgba(200,150,46,0.45);
+  transform: translateY(-4px);
+}
+
+.comm-card img {
+  width: 100%;
+  max-width: 285px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .bigfold { padding: 76px 0; }
+  .problem { padding: 76px 0 70px; }
+  .delivery { padding: 76px 0 70px; }
+  .partners { padding: 70px 0 0; }
+  .fold-rule { margin-bottom: 22px; }
+  .bigfold-title { margin-bottom: 26px; }
+  .comm-card { padding: 38px 24px 30px; }
+}
