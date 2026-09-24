@@ -3407,3 +3407,108 @@ a.team-photo { display: block; text-decoration: none; }
   border-color: var(--gold);
   color: var(--bg-primary);
 }
+
+/* --- Delivery Method: the organisation's own environment (2026-09-22) --- */
+.dm-statement {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 3.6vw, 50px);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 88px auto 30px;
+  max-width: 900px;
+}
+
+.dm-body { max-width: 780px; margin: 0 auto; }
+
+.dm-body p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.dm-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 70px auto 0;
+  text-align: left;
+}
+
+.dm-list-head {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+
+.dm-list { list-style: none; display: grid; gap: 13px; }
+
+.dm-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.dm-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 11px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.dm-split-img img { width: 100%; height: auto; display: block; }
+
+.dm-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 640px;
+  margin: 80px auto 0;
+  align-items: end;
+}
+
+.dm-pair figure { margin: 0; }
+.dm-pair img { width: 100%; height: auto; display: block; }
+
+.dm-bigline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 4.6vw, 68px);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 60px auto 0;
+  max-width: 1000px;
+}
+
+.dm-body-close { margin-top: 56px; }
+
+.dm-body-close .dm-close {
+  margin-top: 18px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .dm-split { grid-template-columns: 1fr; gap: 36px; max-width: 480px; }
+  .dm-split-img { max-width: 300px; margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .dm-statement { margin-top: 60px; }
+  .dm-split { margin-top: 48px; }
+  .dm-pair { margin-top: 54px; gap: 18px; max-width: 420px; }
+  .dm-bigline { margin-top: 44px; }
+  .dm-body-close { margin-top: 40px; }
+}
