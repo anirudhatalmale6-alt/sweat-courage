@@ -3512,3 +3512,10 @@ a.team-photo { display: block; text-decoration: none; }
   .dm-bigline { margin-top: 44px; }
   .dm-body-close { margin-top: 40px; }
 }
+
+/* button through to the full How It Works page */
+.dm-btn { margin-top: 54px; }
+
+@media (max-width: 768px) {
+  .dm-btn { margin-top: 40px; }
+}
