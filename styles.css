@@ -3924,3 +3924,20 @@ a.team-photo { display: block; text-decoration: none; }
   .edge-live-strip { margin-top: 40px; }
   .edge-live-strip img { width: 165%; max-width: none; margin-left: -32%; }
 }
+
+/* --- communities: two cards, logos optically matched (2026-09-29) --- */
+.comm-grid.is-two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* the two wordmarks have very different internal whitespace, so size them
+   individually rather than to the same box */
+.comm-card img.logo-coach { max-width: 330px; }
+.comm-card img.logo-edge  { max-width: 235px; }
+
+@media (max-width: 760px) {
+  .comm-grid.is-two { grid-template-columns: 1fr; max-width: 420px; }
+}
