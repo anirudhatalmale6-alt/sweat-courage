@@ -3941,3 +3941,20 @@ a.team-photo { display: block; text-decoration: none; }
 @media (max-width: 760px) {
   .comm-grid.is-two { grid-template-columns: 1fr; max-width: 420px; }
 }
+
+/* --- trusted-by lockup under the Connected Coach wordmark (2026-09-30) --- */
+/* the crests are navy and black, so they need a light panel to stay legible
+   on the dark hero - same reasoning as the homepage logo band */
+.cc-trusted {
+  background: #ffffff;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 22px 30px;
+}
+
+.cc-trusted img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 768px) {
+  .cc-trusted { max-width: 330px; padding: 16px 20px; margin-bottom: 30px; }
+}
