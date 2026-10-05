@@ -3943,20 +3943,17 @@ a.team-photo { display: block; text-decoration: none; }
 }
 
 /* --- trusted-by lockup under the Connected Coach wordmark (2026-09-30) --- */
-/* the crests are navy and black, so they need a light panel to stay legible
-   on the dark hero - same reasoning as the homepage logo band */
+/* client supplied a transparent version with the PFA mark reversed to white,
+   so it sits straight on the dark hero - no panel behind it any more */
 .cc-trusted {
-  background: #ffffff;
-  border-radius: 6px;
   max-width: 600px;
   margin: 0 auto 40px;
-  padding: 22px 30px;
 }
 
 .cc-trusted img { width: 100%; height: auto; display: block; }
 
 @media (max-width: 768px) {
-  .cc-trusted { max-width: 330px; padding: 16px 20px; margin-bottom: 30px; }
+  .cc-trusted { max-width: 330px; margin-bottom: 30px; }
 }
 
 /* --- the Connected Coach film (2026-09-30) --- */
