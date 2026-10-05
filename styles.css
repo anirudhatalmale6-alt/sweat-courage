@@ -3983,3 +3983,39 @@ a.team-photo { display: block; text-decoration: none; }
 @media (max-width: 768px) {
   .cc-film { padding: 64px 0 60px; }
 }
+
+/* --- launch announcement (2026-10-05) --- */
+.launch-band {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(200,150,46,0.35);
+  padding: 34px 0 32px;
+  text-align: center;
+}
+
+.launch-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.launch-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 4.4vw, 62px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* the full-width photo band was cropping too tightly */
+.cc-photo-band img { max-height: 640px; object-position: center 28%; }
+
+@media (max-width: 768px) {
+  .launch-band { padding: 24px 0 22px; }
+  .launch-sub { font-size: 10.5px; letter-spacing: 0.24em; }
+  .cc-photo-band img { max-height: 340px; }
+}
