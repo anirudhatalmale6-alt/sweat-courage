@@ -4019,3 +4019,233 @@ a.team-photo { display: block; text-decoration: none; }
   .launch-sub { font-size: 10.5px; letter-spacing: 0.24em; }
   .cc-photo-band img { max-height: 340px; }
 }
+
+/* =========================================================
+   HOMEPAGE v7 (2026-10-25): numbered folds, club pricing
+   ========================================================= */
+.hp-title .gold, .hp-card-title .gold, .final-title .gold { color: var(--gold); }
+
+.hero-bar.hp-hero-bar { margin: 0 0 22px; }
+.hp-hero-lead {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--text-white);
+  margin: 18px 0 8px;
+}
+.hero-content .hero-desc { margin-bottom: 28px; }
+
+.hp-price { margin-bottom: 30px; }
+.hp-price-figure {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 7vw, 96px);
+  line-height: 0.9;
+  color: var(--gold);
+  letter-spacing: 0.01em;
+}
+.hp-price-figure small {
+  font-size: 0.34em;
+  letter-spacing: 0.04em;
+  vertical-align: 0.95em;
+  margin-left: 4px;
+}
+.hp-price-note { font-size: 15px; color: var(--text-light); margin-top: 6px; }
+.hp-price.is-center { text-align: center; margin: 30px 0 34px; }
+
+/* --- numbered folds --- */
+.hp-fold { padding: 110px 0; background: var(--bg-primary); }
+.hp-wrap { max-width: 1080px; }
+.hp-kicker {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hp-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(46px, 6.4vw, 88px);
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.hp-lead {
+  max-width: 720px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+.hp-rule { display: block; width: 110px; height: 2px; background: var(--gold); margin: 0 auto 34px; }
+
+.hp-gap { text-align: center; margin: 70px auto 60px; max-width: 820px; }
+.hp-gap-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(42px, 5.4vw, 72px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hp-gap p { font-size: 19px; line-height: 1.6; color: var(--text-light); }
+
+.hp-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-subtle);
+}
+.hp-pillar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 34px 26px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.hp-pillar:not(:nth-child(3n)) { border-right: 1px solid var(--border-subtle); }
+.hp-icon { flex: 0 0 52px; width: 52px; height: 52px; color: var(--gold); }
+.hp-icon svg, .hp-point-icon svg { width: 100%; height: 100%; display: block; }
+.hp-pillar h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.hp-pillar p { font-size: 14.5px; line-height: 1.6; color: var(--text-light); }
+
+.hp-close { text-align: center; margin-top: 64px; }
+.hp-close p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+.hp-close.is-soft p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-light);
+}
+
+.hp-band { background: var(--bg-primary); line-height: 0; }
+.hp-band img { width: 100%; max-height: 620px; object-fit: cover; object-position: center 35%; display: block; }
+
+/* --- cards --- */
+.hp-cards { display: grid; gap: 30px; margin-top: 14px; }
+.hp-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hp-card.is-flip { grid-template-columns: 1.15fr 1fr; }
+.hp-card.is-flip .hp-card-img { order: 2; }
+.hp-card-img { position: relative; min-height: 360px; background: #0d0d0d; }
+.hp-card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hp-card-img.is-phone img { object-fit: contain; padding: 26px 0; }
+.hp-card-body { padding: 48px 50px; display: flex; flex-direction: column; justify-content: center; }
+.hp-num {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hp-num::after { content: ''; width: 140px; height: 2px; background: var(--gold); }
+.hp-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.hp-tag.is-players { color: #e5483c; }
+.hp-tag.is-coaches { color: #4a9fe0; }
+.hp-badge {
+  align-self: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+}
+.hp-badge.is-parents { background: #6cc24a; }
+.hp-badge.is-live { background: var(--gold); }
+.hp-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.hp-card-body > p:last-child { font-size: 17px; line-height: 1.7; color: var(--text-light); }
+.hp-points { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 18px; }
+.hp-points li { display: flex; align-items: center; gap: 18px; font-size: 17px; line-height: 1.5; color: var(--text-light); }
+.hp-point-icon {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  padding: 12px;
+  color: var(--gold);
+}
+.hp-foot { text-align: center; font-size: 18px; color: var(--text-light); margin-top: 44px; }
+
+/* --- 04 people + founder --- */
+.hp-people { padding-bottom: 70px; }
+.hp-founder { border-top: 1px solid var(--border-subtle); }
+.hp-founder .founder-image { min-height: 520px; }
+.hp-founder .founder-image img { object-position: center 18%; }
+.hp-founder .founder-title { font-size: clamp(38px, 4vw, 54px); margin-bottom: 6px; }
+.hp-founder .founder-label { margin-bottom: 22px; }
+.hp-founder .founder-text { font-size: 17px; max-width: 440px; }
+.hp-founder .founder-bottom { margin-top: 8px; }
+.hp-final .final-title { line-height: 1; }
+
+@media (max-width: 900px) {
+  .hp-pillars { grid-template-columns: repeat(2, 1fr); }
+  .hp-pillar:not(:nth-child(3n)) { border-right: none; }
+  .hp-pillar:nth-child(odd) { border-right: 1px solid var(--border-subtle); }
+  .hp-card, .hp-card.is-flip { grid-template-columns: 1fr; }
+  .hp-card.is-flip .hp-card-img { order: 0; }
+  .hp-card-img { min-height: 300px; }
+  .hp-card-img.is-phone { min-height: 380px; }
+}
+
+@media (max-width: 768px) {
+  .hp-fold { padding: 70px 0; }
+  .hp-title { margin-bottom: 22px; }
+  .hp-lead, .hp-gap p { font-size: 17px; }
+  .hp-gap { margin: 50px auto 40px; }
+  .hp-card-body { padding: 32px 26px 36px; }
+  .hp-num::after { width: 90px; }
+  .hp-close { margin-top: 44px; }
+  .hp-founder .founder-image { min-height: 440px; }
+  .hp-people { padding-bottom: 50px; }
+}
+
+@media (max-width: 560px) {
+  .hp-pillars { grid-template-columns: 1fr; }
+  .hp-pillar:nth-child(odd) { border-right: none; }
+  .hp-pillar { padding: 26px 6px; }
+  .hp-card-img { min-height: 260px; }
+}
