@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f27">
+<link rel="stylesheet" href="styles.css?v=f28">
 </head>
 <body>
 
@@ -20,9 +20,9 @@
       <li><a href="results.html">RESULTS</a></li>
       <li><a href="https://www.drewebroughton.com" target="_blank" rel="noopener">FOUNDER</a></li>
       <li><a href="how-it-works.html">HOW IT WORKS</a></li>
-      <li class="nav-cta-mobile-item"><a href="work-with-us.html" class="nav-cta nav-cta-mobile">BOOK A CLUB DEMO</a></li>
+      <li class="nav-cta-mobile-item"><a href="work-with-us.html" class="nav-cta nav-cta-mobile" data-demo>BOOK A CLUB DEMO</a></li>
     </ul>
-    <a href="work-with-us.html" class="nav-cta">BOOK A CLUB DEMO</a>
+    <a href="work-with-us.html" class="nav-cta" data-demo>BOOK A CLUB DEMO</a>
     <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
       <span></span><span></span><span></span>
     </button>
@@ -44,7 +44,7 @@
       <p class="hp-price-note">per club, per year</p>
     </div>
     <div class="hero-buttons">
-      <a href="#inside" class="btn-gold">See What's Included <span>&rarr;</span></a>
+      <a href="work-with-us.html" class="btn-gold" data-demo>See What's Included <span>&rarr;</span></a>
     </div>
   </div>
   <div class="hero-image">
@@ -112,7 +112,7 @@
     <h2 class="hp-title"><span class="gold">One Platform.</span><br>Your Whole Club.</h2>
     <div class="hp-cards">
       <article class="hp-card">
-        <div class="hp-card-img"><img src="images/hp/mindset-cornell.webp" alt="Drewe Broughton at Cornell with the head coach" loading="lazy"></div>
+        <div class="hp-card-img"><img src="images/hp/players-right.webp" alt="Players listening during a Sweat &amp; Courage session" loading="lazy"></div>
         <div class="hp-card-body">
           <p class="hp-num">01</p>
           <p class="hp-tag is-players">Players</p>
@@ -121,7 +121,7 @@
         </div>
       </article>
       <article class="hp-card">
-        <div class="hp-card-img"><img src="images/coaches.jpg" alt="Drewe Broughton with a university head coach" loading="lazy"></div>
+        <div class="hp-card-img"><img src="images/hp/mindset-cornell.webp" alt="Drewe Broughton at Cornell with the head coach" loading="lazy"></div>
         <div class="hp-card-body">
           <p class="hp-num">02</p>
           <p class="hp-tag is-coaches">Coaches</p>
@@ -129,40 +129,15 @@
           <p>Understand yourself. Strengthen communication. Build trust with your players.</p>
         </div>
       </article>
-    </div>
-    <p class="hp-foot">Dedicated learning spaces. A shared language for performance.</p>
-  </div>
-</section>
-
-<!-- ===== 02 / BEYOND THE TRAINING GROUND ===== -->
-<section class="hp-fold fold-sep">
-  <div class="container hp-wrap">
-    <p class="hp-kicker">02 / Beyond The Training Ground</p>
-    <h2 class="hp-title">Support That<br><span class="gold">Stays With Them.</span></h2>
-    <div class="hp-cards">
-      <article class="hp-card is-flip">
+      <article class="hp-card">
         <div class="hp-card-img"><img src="images/parents.jpg" alt="Drewe Broughton with a young player at the stadium" loading="lazy"></div>
         <div class="hp-card-body">
-          <p class="hp-badge is-parents">Parents</p>
+          <p class="hp-num">03</p>
+          <p class="hp-tag is-parents">Parents</p>
           <h3 class="hp-card-title">Parent Education</h3>
           <p>Understand the sporting journey. Recognise pressure. Support your child with greater awareness.</p>
         </div>
       </article>
-      <article class="hp-card is-flip">
-        <div class="hp-card-img is-phone"><img src="images/app/phone1_01-t.webp" alt="Sweat &amp; Courage app showing live sessions and on-demand videos" loading="lazy"></div>
-        <div class="hp-card-body">
-          <p class="hp-badge is-live">Live &amp; On Demand</p>
-          <h3 class="hp-card-title">Keep The Conversation<br><span class="gold">Going.</span></h3>
-          <ul class="hp-points">
-            <li><span class="hp-point-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="3.5" fill="currentColor"/><path d="M16 16a11 11 0 0 0 0 16M32 16a11 11 0 0 1 0 16M11 11a18 18 0 0 0 0 26M37 11a18 18 0 0 1 0 26"/></svg></span>Live learning and questions</li>
-            <li><span class="hp-point-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 15l14 9-14 9z"/></svg></span>Resources to revisit in your own time</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-    <div class="hp-close is-soft">
-      <span class="hp-rule"></span>
-      <p>Learning that reaches across your organisation.</p>
     </div>
   </div>
 </section>
@@ -184,10 +159,10 @@
   </div>
 </section>
 
-<!-- ===== 03 / THE PEOPLE BEHIND IT ===== -->
+<!-- ===== 02 / THE PEOPLE BEHIND IT ===== -->
 <section class="hp-fold fold-sep hp-people">
   <div class="container hp-wrap">
-    <p class="hp-kicker">03 / The People Behind It</p>
+    <p class="hp-kicker">02 / The People Behind It</p>
     <h2 class="hp-title">Built From Experience.<br><span class="gold">Grounded In Connection.</span></h2>
     <p class="hp-lead">A world-class human performance service, created by Drewe Broughton.</p>
   </div>
@@ -208,6 +183,43 @@
     </div>
   </div>
 </section>
+
+<!-- ===== DEMO FORM POPUP ===== -->
+<div class="demo-modal" id="demoModal" aria-hidden="true">
+  <div class="demo-modal-box" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+    <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
+    <p class="hp-kicker">Book A Club Demo</p>
+    <h2 class="demo-modal-title" id="demoTitle">See What&rsquo;s Included</h2>
+    <p class="demo-modal-lead">Tell us a little about your club and we&rsquo;ll be in touch to arrange a walkthrough of the platform.</p>
+    <form class="wwu-form" action="https://formsubmit.co/gmorgan4807@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Club Demo Request - Sweat &amp; Courage">
+      <input type="hidden" name="_next" value="https://sweatandcourage.com/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="wwu-field-row">
+        <div class="wwu-field"><label for="d-name">Name</label><input type="text" id="d-name" name="name" placeholder="Your name" required></div>
+        <div class="wwu-field"><label for="d-email">Email</label><input type="email" id="d-email" name="email" placeholder="you@example.com" required></div>
+      </div>
+      <div class="wwu-field-row">
+        <div class="wwu-field"><label for="d-org">Club or organisation</label><input type="text" id="d-org" name="org" placeholder="Club, academy or company"></div>
+        <div class="wwu-field"><label for="d-role">Your role <span>(optional)</span></label><input type="text" id="d-role" name="role" placeholder="e.g. Head Coach, Director"></div>
+      </div>
+      <div class="wwu-field"><label for="d-message">Anything you&rsquo;d like us to know?</label><textarea id="d-message" name="message" rows="4" placeholder="Squad sizes, age groups, timings&hellip;"></textarea></div>
+      <button type="submit" class="btn-gold">REQUEST A DEMO <span>&rarr;</span></button>
+    </form>
+  </div>
+</div>
+<script>
+  (function () {
+    var m = document.getElementById('demoModal');
+    function open(e) { if (e) e.preventDefault(); m.classList.add('open'); m.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { document.getElementById('d-name').focus(); }, 50); }
+    function close() { m.classList.remove('open'); m.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-demo]').forEach(function (a) { a.addEventListener('click', open); });
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.closest('.demo-modal-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.classList.contains('open')) close(); });
+  })();
+</script>
 
 <!-- ===== VIDEO MODAL ===== -->
 <div class="video-modal" id="videoModal" onclick="closeVideo(event)">
