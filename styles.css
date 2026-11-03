@@ -4281,3 +4281,4 @@ a.team-photo { display: block; text-decoration: none; }
   .demo-modal-box { padding: 34px 20px 26px; }
   .demo-modal .wwu-field-row { grid-template-columns: 1fr; }
 }
+.hp-founder .founder-image img.is-usmnt { object-position: 36% 40%; }
