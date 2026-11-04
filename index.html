@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f29">
+<link rel="stylesheet" href="styles.css?v=f30">
 </head>
 <body>
 
@@ -38,13 +38,18 @@
       <span class="gold">For Your Organisation.</span>
     </h1>
     <p class="hp-hero-lead">Develop the people behind the performance.</p>
-    <p class="hero-desc">One platform for athletes, coaches, parents and leaders.</p>
+    <p class="hero-desc">Bring the Sweat &amp; Courage&reg; philosophy into your organisation, with ongoing learning and support for athletes, coaches, parents and leaders.</p>
     <div class="hp-price">
+      <p class="hp-price-label">Annual Organisation Licence</p>
       <p class="hp-price-figure">$9,999 <small>USD</small></p>
-      <p class="hp-price-note">per club, per year</p>
+      <p class="hp-price-note">per year</p>
     </div>
     <div class="hero-buttons">
-      <a href="work-with-us.html" class="btn-gold" data-demo>See What's Included <span>&rarr;</span></a>
+      <a href="work-with-us.html" class="btn-gold" data-demo>Explore What's Included <span>&rarr;</span></a>
+    </div>
+    <div class="hp-partner">
+      <p>For organisations seeking direct access to Drewe and a more personal level of support, bespoke partnerships are available.</p>
+      <a href="work-with-us.html" class="btn-outline hp-partner-btn" data-demo="partnership">Discuss A Partnership <span>&rarr;</span></a>
     </div>
   </div>
   <div class="hero-image">
@@ -173,8 +178,9 @@
   </div>
   <div class="founder-content">
     <h2 class="founder-title">Drewe Broughton</h2>
-    <p class="founder-label">Founder</p>
-    <p class="founder-text">A former professional footballer helping people become better human beings and better performers.</p>
+    <p class="founder-label">Founder &amp; Human Performance Coach</p>
+    <p class="founder-text">For over 15 years, Drewe has worked at the sharp end of elite sport and business, trusted by Premier League managers, the USMNT, international athletes and business leaders.</p>
+    <p class="founder-text">Creator of the VASC Method&trade;, he founded Sweat &amp; Courage&reg; to bring that depth of human understanding to young people, coaches and parents. His philosophy is simple: developing the person and developing the performer belong together.</p>
     <div class="founder-bottom">
       <a href="#" class="btn-outline-play" onclick="openVideo(event)">
         Watch My Story
@@ -188,11 +194,11 @@
 <div class="demo-modal" id="demoModal" aria-hidden="true">
   <div class="demo-modal-box" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
     <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
-    <p class="hp-kicker">Book A Club Demo</p>
-    <h2 class="demo-modal-title" id="demoTitle">See What&rsquo;s Included</h2>
-    <p class="demo-modal-lead">Tell us a little about your club and we&rsquo;ll be in touch to arrange a walkthrough of the platform.</p>
+    <p class="hp-kicker" id="demoKicker">Book A Club Demo</p>
+    <h2 class="demo-modal-title" id="demoTitle">Explore What&rsquo;s Included</h2>
+    <p class="demo-modal-lead" id="demoLead">Tell us a little about your club and we&rsquo;ll be in touch to arrange a walkthrough of the platform.</p>
     <form class="wwu-form" action="https://formsubmit.co/gmorgan4807@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Club Demo Request - Sweat &amp; Courage">
+      <input type="hidden" name="_subject" id="demoSubject" value="New Club Demo Request - Sweat &amp; Courage">
       <input type="hidden" name="_next" value="https://sweatandcourage.com/thankyou.html">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -213,7 +219,17 @@
 <script>
   (function () {
     var m = document.getElementById('demoModal');
-    function open(e) { if (e) e.preventDefault(); m.classList.add('open'); m.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { document.getElementById('d-name').focus(); }, 50); }
+    var COPY = {
+      demo: ['Book A Club Demo', 'Explore What\u2019s Included', 'Tell us a little about your club and we\u2019ll be in touch to arrange a walkthrough of the platform.', 'New Club Demo Request - Sweat & Courage'],
+      partnership: ['Bespoke Partnerships', 'Discuss A Partnership', 'Tell us about your organisation and the kind of support you\u2019re looking for, and we\u2019ll be in touch to talk it through with Drewe.', 'New Partnership Enquiry - Sweat & Courage']
+    };
+    function open(e) {
+      var c = COPY[(e && e.currentTarget.getAttribute('data-demo')) === 'partnership' ? 'partnership' : 'demo'];
+      document.getElementById('demoKicker').textContent = c[0];
+      document.getElementById('demoTitle').textContent = c[1];
+      document.getElementById('demoLead').textContent = c[2];
+      document.getElementById('demoSubject').value = c[3];
+      if (e) e.preventDefault(); m.classList.add('open'); m.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { document.getElementById('d-name').focus(); }, 50); }
     function close() { m.classList.remove('open'); m.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
     document.querySelectorAll('[data-demo]').forEach(function (a) { a.addEventListener('click', open); });
     m.addEventListener('click', function (e) { if (e.target === m || e.target.closest('.demo-modal-close')) close(); });
