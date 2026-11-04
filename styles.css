@@ -4290,3 +4290,4 @@ a.team-photo { display: block; text-decoration: none; }
 .hp-partner { margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 520px; }
 .hp-partner p { font-size: 14px; line-height: 1.7; color: var(--text-light); margin-bottom: 16px; }
 .hp-partner-btn span { color: var(--gold); }
+.hp-card-img img.is-parents-img { object-position: 40% 22%; }
