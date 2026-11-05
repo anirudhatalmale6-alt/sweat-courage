@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f31">
+<link rel="stylesheet" href="styles.css?v=f32">
 </head>
 <body>
 
@@ -19,9 +19,9 @@
       <li><a href="results.html">RESULTS</a></li>
       <li><a href="https://www.drewebroughton.com" target="_blank" rel="noopener">FOUNDER</a></li>
       <li><a href="how-it-works.html" class="active">HOW IT WORKS</a></li>
-      <li class="nav-cta-mobile-item"><a href="work-with-us.html" class="nav-cta nav-cta-mobile">BOOK A CLUB DEMO</a></li>
+      <li class="nav-cta-mobile-item"><a href="work-with-us.html" class="nav-cta nav-cta-mobile" data-demo>BOOK A CLUB DEMO</a></li>
     </ul>
-    <a href="work-with-us.html" class="nav-cta">BOOK A CLUB DEMO</a>
+    <a href="work-with-us.html" class="nav-cta" data-demo>BOOK A CLUB DEMO</a>
     <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">
       <span></span><span></span><span></span>
     </button>
@@ -29,66 +29,219 @@
 </nav>
 
 <!-- ===== PAGE HERO ===== -->
-<section class="page-hero">
-  <p class="page-label">How It Works</p>
-  <h1>The Delivery <span class="gold">Method.</span></h1>
+<section class="page-hero hiw-hero">
+  <p class="page-label">How Sweat &amp; Courage Works</p>
+  <h1>Resilience. Self-Belief.<br><span class="gold">Confidence. Consistency.</span></h1>
   <div class="hero-bar"></div>
-  <p class="page-intro">The Sweat &amp; Courage platform provides ongoing learning and support between the moments that matter.</p>
+  <p class="page-intro">Every organisation wants these qualities in its people. Developing them starts with understanding the person behind the performance.</p>
 </section>
 
-<!-- ===== THE ORGANISATION'S OWN ENVIRONMENT ===== -->
-<section class="delivery">
-  <div class="container">
-    <p class="dm-statement">Your organisation. Your identity.<br><span class="gold">Your private performance environment.</span></p>
-
-    <div class="dm-body">
-      <p>Every organisation joining Sweat &amp; Courage receives its own dedicated area within the platform, built around its people and presented in its own club or company branding.</p>
-      <p>Players, coaches, leaders or staff enter an environment that feels like theirs, not another generic learning platform.</p>
+<!-- ===== THE FOUR QUALITIES ===== -->
+<section class="hp-fold hiw-fold">
+  <div class="container hp-wrap">
+    <p class="hiw-p hiw-center">Sweat &amp; Courage helps players, coaches and parents explore what gets in the way, and develop the foundations for:</p>
+    <div class="hiw-cards is-four">
+      <div class="hiw-card"><h3>Resilience</h3><p>Facing setbacks, learning from disappointment and finding the courage to go again.</p></div>
+      <div class="hiw-card"><h3>Self-belief</h3><p>Building a deeper trust in who you are, beyond results, selection or other people&rsquo;s approval.</p></div>
+      <div class="hiw-card"><h3>Confidence</h3><p>Expressing yourself, making decisions and taking action, even when doubt is present.</p></div>
+      <div class="hiw-card"><h3>Consistency</h3><p>Understanding what helps you perform at your best, recognising what pulls you away and learning how to return.</p></div>
     </div>
-
-    <div class="dm-split">
-      <div class="dm-split-text">
-        <p class="dm-list-head">The organisation can have its own:</p>
-        <ul class="dm-list">
-          <li>Branded private area</li>
-          <li>Dedicated communities and member groups</li>
-          <li>Learning and development content</li>
-          <li>Private discussion feeds</li>
-          <li>Live calls and ongoing coaching</li>
-          <li>Organisation-specific resources and programmes</li>
-          <li>Direct access to the people supporting their development</li>
-        </ul>
-      </div>
-      <div class="dm-split-img">
-        <img src="images/app/phone1_02-t.webp" alt="Sweat &amp; Courage app - Your Questions Answered">
-      </div>
-    </div>
-
-    <div class="dm-pair">
-      <figure><img src="images/app/phone1_03-t.webp" alt="A club's own branded area inside the Sweat &amp; Courage platform"></figure>
-      <figure><img src="images/app/phone1_04-t.webp" alt="A club's own branded area inside the Sweat &amp; Courage platform"></figure>
-    </div>
-
-    <p class="dm-bigline">Your Brand. Our Platform.<br><span class="gold">One Connected Performance Environment.</span></p>
-
-    <div class="dm-body dm-body-close">
-      <p>All powered by the Sweat &amp; Courage methodology and platform.</p>
-      <p class="dm-close">Sweat &amp; Courage stays with your people between the moments that matter, creating an ongoing environment for connection, development, accountability and performance.</p>
-    </div>
+    <p class="hiw-p hiw-center">Through learning, practical resources, honest conversations and ongoing support, we help your people bring these qualities into how they compete, coach and live.</p>
   </div>
 </section>
 
-<!-- ===== BOTTOM CTA ===== -->
-<section class="bottom-cta">
-  <div class="container">
-    <div class="bottom-cta-inner">
-      <h3>
-        Want this environment for your organisation?
-        <span>Let's talk about what that could look like.</span>
-      </h3>
-      <a href="work-with-us.html" class="nav-cta">BRING S&amp;C TO YOUR COMMUNITY <span>&rarr;</span></a>
-    </div>
+<section class="hp-fold hiw-fold fold-sep" id="q1">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">01</p>
+    <h2 class="hiw-q">What Is Sweat &amp; Courage?</h2>
+    <p class="hiw-p">Sweat &amp; Courage is a human performance platform created by Drewe Broughton to bring ongoing learning and support into your organisation.</p>
+    <p class="hiw-p">It explores the human experiences behind performance: fear of mistakes, pressure, setbacks, anger, comparison, trust and relationships.</p>
+    <p class="hiw-p">Our philosophy connects winning and human development. We help people understand themselves more deeply so they can bring greater courage, freedom and conviction into what they do.</p>
   </div>
 </section>
+
+<section class="hp-fold hiw-fold fold-sep is-alt" id="q2">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">02</p>
+    <h2 class="hiw-q">How Does The Platform Work?</h2>
+    <p class="hiw-p">Your members access a dedicated space containing video learning, practical resources, community discussions and opportunities to engage with Drewe.</p>
+    <p class="hiw-p">They can follow a structured course, explore a question relevant to their day or take part in a group conversation.</p>
+    <p class="hiw-p">The platform stays available between training sessions, matches and meetings, helping members return to the learning when they need it.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep" id="q3">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">03</p>
+    <h2 class="hiw-q">Does Our Organisation Get Its Own Branded Space?</h2>
+    <p class="hiw-p">Yes. Your organisation receives a dedicated area within the Sweat &amp; Courage platform, presented in your club or company branding.</p>
+    <p class="hiw-p">For clubs, this includes separate spaces for <strong>Coaches, Parents and Players</strong>. Each group receives relevant learning within a shared philosophy.</p>
+    <p class="hiw-p">For businesses, the structure can be tailored around leaders, managers and staff.</p>
+    <p class="hiw-p">Your identity creates a familiar home for your people, with the agreed content, communities and support brought together in one place.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep is-alt" id="q4">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">04</p>
+    <h2 class="hiw-q">What Will Members Find Inside?</h2>
+    <p class="hiw-p">Each Coaches, Parents and Players area follows five clear sections:</p>
+      <div class="hiw-table">
+        <div class="hiw-row hiw-row-head"><span>Section</span><span>What members will find</span></div>
+        <div class="hiw-row"><span class="hiw-key">Start Here</span><span>A welcome from Drewe, an introduction to the philosophy and guidance on using their area.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Resources</span><span>Courses, books, guides, practical tools, short talks and recordings.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Ask Drewe</span><span>A place to submit questions and explore Drewe&rsquo;s video answers to questions from the community.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Live Sessions</span><span>Upcoming group sessions, dates and joining information.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Community</span><span>Regular posts, reflection questions, discussions and shared experiences.</span></div>
+      </div>
+    <p class="hiw-p">A separate <strong>Book a 1-to-1</strong> option allows members to explore additional personal coaching, with availability and fees explained before booking.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep" id="q5">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">05</p>
+    <h2 class="hiw-q">How Does It Support Coaches, Parents And Players?</h2>
+    <div class="hiw-cards is-three">
+      <div class="hiw-card"><p class="hp-tag is-coaches">Coaches</p><p>Explore how your own responses influence the people you lead. Develop greater awareness of fear, control, ego and trust, and learn how to create an environment where people can compete, make mistakes, take responsibility and grow.</p></div>
+      <div class="hiw-card"><p class="hp-tag is-parents">Parents</p><p>Understand the pressures your child faces and the influence you have. Explore how to support confidence and resilience, respond to disappointment and remain connected through the demands of development and competition.</p></div>
+      <div class="hiw-card"><p class="hp-tag is-players">Players</p><p>Understand what happens within you when you compete. Explore doubt, anger, comparison, fear of mistakes and the need to prove yourself. Develop greater trust in who you are and the courage to express yourself under pressure.</p></div>
+    </div>
+    <p class="hiw-p">Each group works on its own development while building a shared language across the club.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep is-alt" id="q6">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">06</p>
+    <h2 class="hiw-q">What Is Included In Resources?</h2>
+    <p class="hiw-p">Resources brings the learning together in five categories:</p>
+      <div class="hiw-table">
+        <div class="hiw-row hiw-row-head"><span>Category</span><span>What&rsquo;s inside</span></div>
+        <div class="hiw-row"><span class="hiw-key">Courses</span><span>Structured video learning, including relevant programmes such as <strong>The Athlete Unleashed</strong> and <strong>VASC Method&trade;</strong>, with supporting PDFs and reflection questions.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Books &amp; Guides</span><span>Drewe&rsquo;s books, downloadable learning materials, summaries and reflection exercises.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Tools for the Moment</span><span>Practical learning around experiences such as fear, mistakes, anger, criticism and setbacks.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Short Talks</span><span>Focused video and audio lessons to explore in a few minutes.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Full Talks &amp; Replays</span><span>Longer presentations and recordings of previous live group sessions.</span></div>
+      </div>
+    <p class="hiw-p">Members can work through a course at their own pace or find support for something they are experiencing right now.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep" id="q7">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">07</p>
+    <h2 class="hiw-q">How Do You Develop Resilience, Self-Belief, Confidence And Consistency?</h2>
+    <p class="hiw-p">We begin with self-understanding.</p>
+    <p class="hiw-p">What happens when you make a mistake? Who do you become under pressure? How much does your confidence depend on approval? What helps you stay connected to yourself when results go against you?</p>
+    <p class="hiw-p">Drewe&rsquo;s <strong>VASC Method&trade; (Vulnerability, Acceptance, Sweat &amp; Courage)</strong> provides a practical foundation for exploring these questions and taking action.</p>
+    <p class="hiw-p">The wider learning covers eight core themes:</p>
+      <div class="hiw-table">
+        <div class="hiw-row hiw-row-head"><span>Theme</span><span>What members explore</span></div>
+        <div class="hiw-row"><span class="hiw-key">Fear &amp; Control</span><span>Recognising fear and how the need for control influences behaviour.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Ego</span><span>Understanding the need to prove, protect, impress or be right.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Vulnerability vs Invincibility</span><span>Finding the courage to be honest, ask for help and stay open under pressure.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Toxic vs Healthy Shame</span><span>Taking responsibility for mistakes without making them a judgement on personal worth.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Trust &amp; Belief</span><span>Developing trust in yourself and others when certainty disappears.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Authenticity</span><span>Knowing who you are and expressing that in how you compete, coach and lead.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Empathy</span><span>Understanding another person&rsquo;s experience while maintaining standards and boundaries.</span></div>
+        <div class="hiw-row"><span class="hiw-key">Sweat &amp; Courage</span><span>Turning awareness into action through effort, honesty and a willingness to face discomfort.</span></div>
+      </div>
+    <p class="hiw-p">Members are encouraged to recognise their patterns, reflect on their choices and practise different responses in everyday situations.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep is-alt" id="q8">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">08</p>
+    <h2 class="hiw-q">How Does The Learning Become Part Of Our Culture?</h2>
+    <p class="hiw-p">Through regular use and shared conversations.</p>
+    <p class="hiw-p">A coach might use a short talk to open a team meeting. A player might explore their response to being left out. A parent might reflect on what they say after a difficult match.</p>
+    <p class="hiw-p">A topic such as fear of mistakes can become a conversation across the club: Where are we holding back? How do we respond when someone gets something wrong? What would courage look like in our next performance?</p>
+    <p class="hiw-p">The platform supplies learning and a place to continue the conversation. Your coaches and leaders help bring it into training, competition and daily relationships.</p>
+    <p class="hiw-p">Over time, the philosophy can become part of how your people speak, respond and support one another.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep" id="q9">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">09</p>
+    <h2 class="hiw-q">What Support Is Included, And What Does It Cost?</h2>
+    <div class="hiw-price"><p class="hp-price-label">Annual Organisation Licence</p><p class="hp-price-figure">$9,999 <small>USD</small></p></div>
+    <p class="hiw-p">Your organisation receives a dedicated branded area, relevant member groups and access to the learning, resources and community features included in your agreement.</p>
+    <p class="hiw-p">Members engage with Drewe through his content, <strong>Ask Drewe</strong> video answers and the group calls included within <strong>Live Sessions</strong>.</p>
+    <p class="hiw-p">For organisations seeking a closer working relationship, <strong>bespoke partnerships</strong> can include dedicated coaching, organisation-specific sessions and direct WhatsApp access to Drewe.</p>
+    <p class="hiw-p">We clearly agree the resources, member access, live-session frequency and level of personal involvement before you join.</p>
+  </div>
+</section>
+
+<section class="hp-fold hiw-fold fold-sep is-alt" id="q10">
+  <div class="container hp-wrap">
+    <p class="hp-kicker">10</p>
+    <h2 class="hiw-q">How Do We Get Started?</h2>
+    <ol class="hiw-steps">
+      <li><span class="hiw-step-n">1</span><div><h3>Book an organisation demo</h3><p>See inside the platform and discuss your people, their challenges and what you want to develop.</p></div></li>
+      <li><span class="hiw-step-n">2</span><div><h3>Agree your package</h3><p>We confirm the member groups, resources and level of support that fit your organisation.</p></div></li>
+      <li><span class="hiw-step-n">3</span><div><h3>Prepare your branded space</h3><p>We organise your dedicated area around your identity and the people using it, with launch timing agreed during setup.</p></div></li>
+      <li><span class="hiw-step-n">4</span><div><h3>Welcome your members</h3><p>Your people begin with <strong>Start Here</strong>, then explore Resources, Ask Drewe, Live Sessions and Community.</p></div></li>
+      <li><span class="hiw-step-n">5</span><div><h3>Bring the philosophy to life</h3><p>Use the learning to begin conversations, support your people and develop the human foundations of performance.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== CLOSING CTA ===== -->
+<section class="final-cta hiw-final">
+  <div class="container">
+    <h2 class="final-title">Develop The People<br><span class="gold">Behind The Performance.</span></h2>
+    <a href="work-with-us.html" class="btn-gold final-btn" data-demo>Book An Organisation Demo <span>&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ===== DEMO FORM POPUP ===== -->
+<div class="demo-modal" id="demoModal" aria-hidden="true">
+  <div class="demo-modal-box" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+    <button class="demo-modal-close" type="button" aria-label="Close">&times;</button>
+    <p class="hp-kicker" id="demoKicker">Book A Club Demo</p>
+    <h2 class="demo-modal-title" id="demoTitle">Explore What&rsquo;s Included</h2>
+    <p class="demo-modal-lead" id="demoLead">Tell us a little about your club and we&rsquo;ll be in touch to arrange a walkthrough of the platform.</p>
+    <form class="wwu-form" action="https://formsubmit.co/gmorgan4807@gmail.com" method="POST">
+      <input type="hidden" name="_subject" id="demoSubject" value="New Club Demo Request - Sweat &amp; Courage">
+      <input type="hidden" name="_next" value="https://sweatandcourage.com/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="wwu-field-row">
+        <div class="wwu-field"><label for="d-name">Name</label><input type="text" id="d-name" name="name" placeholder="Your name" required></div>
+        <div class="wwu-field"><label for="d-email">Email</label><input type="email" id="d-email" name="email" placeholder="you@example.com" required></div>
+      </div>
+      <div class="wwu-field-row">
+        <div class="wwu-field"><label for="d-org">Club or organisation</label><input type="text" id="d-org" name="org" placeholder="Club, academy or company"></div>
+        <div class="wwu-field"><label for="d-role">Your role <span>(optional)</span></label><input type="text" id="d-role" name="role" placeholder="e.g. Head Coach, Director"></div>
+      </div>
+      <div class="wwu-field"><label for="d-message">Anything you&rsquo;d like us to know?</label><textarea id="d-message" name="message" rows="4" placeholder="Squad sizes, age groups, timings&hellip;"></textarea></div>
+      <button type="submit" class="btn-gold">REQUEST A DEMO <span>&rarr;</span></button>
+    </form>
+  </div>
+</div>
+<script>
+  (function () {
+    var m = document.getElementById('demoModal');
+    var COPY = {
+      demo: ['Book A Club Demo', 'Explore What\u2019s Included', 'Tell us a little about your club and we\u2019ll be in touch to arrange a walkthrough of the platform.', 'New Club Demo Request - Sweat & Courage'],
+      partnership: ['Bespoke Partnerships', 'Discuss A Partnership', 'Tell us about your organisation and the kind of support you\u2019re looking for, and we\u2019ll be in touch to talk it through with Drewe.', 'New Partnership Enquiry - Sweat & Courage']
+    };
+    function open(e) {
+      var c = COPY[(e && e.currentTarget.getAttribute('data-demo')) === 'partnership' ? 'partnership' : 'demo'];
+      document.getElementById('demoKicker').textContent = c[0];
+      document.getElementById('demoTitle').textContent = c[1];
+      document.getElementById('demoLead').textContent = c[2];
+      document.getElementById('demoSubject').value = c[3];
+      if (e) e.preventDefault(); m.classList.add('open'); m.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; setTimeout(function () { document.getElementById('d-name').focus(); }, 50); }
+    function close() { m.classList.remove('open'); m.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-demo]').forEach(function (a) { a.addEventListener('click', open); });
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.closest('.demo-modal-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.classList.contains('open')) close(); });
+  })();
+</script>
 
 </body></html>
