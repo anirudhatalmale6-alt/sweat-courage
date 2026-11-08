@@ -4332,3 +4332,30 @@ a.team-photo { display: block; text-decoration: none; }
   .hiw-row-head { display: none; }
   .hiw-steps li { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
 }
+
+/* --- 8 Nov: wider hero text, audience row --- */
+@media (min-width: 901px) {
+  .hero.hp-hero-wide { grid-template-columns: 1.65fr 1fr; }
+  .hp-hero-wide .hero-content { padding-right: 48px; }
+}
+.hp-hero-wide .hero-content .hero-desc, .hp-hero-wide .hp-partner { max-width: 680px; }
+.hp-hero-wide .hp-hero-lead { margin-bottom: 22px; }
+.hp-aud { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 4px 0 24px; max-width: 760px; }
+.hp-aud-item { border-left: 2px solid rgba(255,255,255,0.12); padding-left: 16px; }
+.hp-aud-item .hp-tag { font-size: 12px; margin-bottom: 8px; }
+.hp-aud-item p:last-child { font-size: 14px; line-height: 1.65; color: var(--text-light); }
+.hp-hero-statement { font-size: 17px; font-weight: 600; color: var(--text-white); line-height: 1.5; margin-bottom: 10px; max-width: 680px; }
+.hp-hero-human { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin: -12px 0 28px; }
+@media (max-width: 760px) {
+  .hp-aud { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (min-width: 901px) {
+  .hp-hero-wide .hero-image { align-self: center; aspect-ratio: 720 / 527; }
+  .hp-hero-wide .hero-content { padding-top: 56px; padding-bottom: 56px; }
+  .hp-hero-wide .hp-price-figure { font-size: clamp(56px, 5vw, 76px); }
+  .hp-hero-wide .hp-price { margin-bottom: 18px; }
+  .hp-hero-wide .hp-partner { margin-top: 24px; padding-top: 20px; }
+}
+@media (min-width: 901px) {
+  .hp-hero-wide .hero-image { -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%); }
+}
