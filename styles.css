@@ -4436,3 +4436,8 @@ a.team-photo { display: block; text-decoration: none; }
   .vasc-lead { margin-bottom: 36px; }
 }
 .vasc-final .final-title { font-size: clamp(32px, 4.2vw, 56px); max-width: 960px; margin: 0 auto; }
+
+/* --- 4-video strip (8 Nov) --- */
+.vid-strip.is-four .vid-grid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; gap: 18px; }
+@media (max-width: 1000px) { .vid-strip.is-four .vid-grid { grid-template-columns: repeat(2, 1fr); max-width: 620px; } }
+@media (max-width: 560px) { .vid-strip.is-four .vid-grid { grid-template-columns: 1fr; max-width: 340px; } }
