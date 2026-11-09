@@ -4473,3 +4473,5 @@ a.team-photo { display: block; text-decoration: none; }
 .hiw-walk { background: var(--bg-primary); padding: 10px 0 70px; }
 .hiw-walk .hiw-video { max-width: 960px; margin: 0 auto; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
 @media (max-width: 640px) { .hiw-walk { padding: 0 0 46px; } }
+.dm-video { max-width: 900px; margin: 0 auto 56px; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+@media (max-width: 640px) { .dm-video { margin-bottom: 36px; } }
