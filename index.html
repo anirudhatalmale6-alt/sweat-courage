@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f38">
+<link rel="stylesheet" href="styles.css?v=f39">
 </head>
 <body>
 
@@ -111,16 +111,43 @@
 </section>
 
 <!-- ===== VIDEO STRIP ===== -->
-<section class="vid-strip is-9x16 is-four">
+<section class="vid-strip vid-carousel" aria-label="Sweat &amp; Courage films">
   <div class="container">
-    <div class="vid-grid">
-      <div class="vid-cell"><video aria-label="Sweat &amp; Courage x Purdue Women&#39;s Soccer" src="images/hp/film-purdue-v2.mp4" poster="images/hp/vidscreen-purdue-v2.jpg" controls playsinline preload="none"></video></div>
-      <div class="vid-cell"><video aria-label="Cornell head coach on Sweat &amp; Courage" src="images/hp/film-cornell-v2.mp4" poster="images/hp/vidscreen-cornell-v2.jpg" controls playsinline preload="none"></video></div>
-      <div class="vid-cell"><video aria-label="Cavalry FC on Sweat &amp; Courage" src="images/hp/film-cavalry.mp4" poster="images/hp/vidscreen-cavalry-v2.jpg" controls playsinline preload="none"></video></div>
-      <div class="vid-cell"><video aria-label="US Men&#39;s National Team player Emeka Eneli on Sweat &amp; Courage" src="images/hp/film-emeka.mp4" poster="images/hp/vidscreen-emeka.jpg" controls playsinline preload="none"></video></div>
+    <div class="vc-wrap">
+      <button class="vc-arrow vc-prev" type="button" aria-label="Previous videos"><span>&lsaquo;</span></button>
+      <div class="vc-track" id="vcTrack">
+        <div class="vc-item"><video aria-label="Athletes from Purdue Women&#39;s Soccer on Sweat &amp; Courage" src="images/hp/film-purdue-v2.mp4" poster="images/hp/vs3-purdue.jpg" controls playsinline preload="none"></video></div>
+        <div class="vc-item"><video aria-label="Cornell head coach on Sweat &amp; Courage" src="images/hp/film-cornell-v3.mp4" poster="images/hp/vs3-cornell.jpg" controls playsinline preload="none"></video></div>
+        <div class="vc-item"><video aria-label="Cavalry FC on Sweat &amp; Courage" src="images/hp/film-cavalry.mp4" poster="images/hp/vs3-cavalry.jpg" controls playsinline preload="none"></video></div>
+        <div class="vc-item"><video aria-label="US Men&#39;s National Team player Emeka Eneli on Sweat &amp; Courage" src="images/hp/film-emeka-v3.mp4" poster="images/hp/vs3-emeka.jpg" controls playsinline preload="none"></video></div>
+        <div class="vc-item"><video aria-label="A Purdue Women&#39;s Soccer athlete on Sweat &amp; Courage" src="images/hp/film-purdue2-v3.mp4" poster="images/hp/vs3-purdue2.jpg" controls playsinline preload="none"></video></div>
+        <div class="vc-item"><video aria-label="Auburn Soccer on Sweat &amp; Courage" src="images/hp/film-auburn-v3.mp4" poster="images/hp/vs3-auburn.jpg" controls playsinline preload="none"></video></div>
+      </div>
+      <button class="vc-arrow vc-next" type="button" aria-label="More videos"><span>&rsaquo;</span></button>
     </div>
   </div>
 </section>
+<script>
+  (function () {
+    var track = document.getElementById('vcTrack');
+    var prev = document.querySelector('.vc-prev'), next = document.querySelector('.vc-next');
+    function step() { var it = track.querySelector('.vc-item'); return it ? it.getBoundingClientRect().width + 16 : 240; }
+    function update() {
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    }
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); });
+    window.addEventListener('resize', update);
+    track.querySelectorAll('video').forEach(function (v) {
+      v.addEventListener('play', function () {
+        track.querySelectorAll('video').forEach(function (o) { if (o !== v) o.pause(); });
+      });
+    });
+    update();
+  })();
+</script>
 <!-- ===== /VIDEO STRIP ===== -->
 
 <!-- ===== PHOTO BAND ===== -->
