@@ -4475,3 +4475,7 @@ a.team-photo { display: block; text-decoration: none; }
 @media (max-width: 640px) { .hiw-walk { padding: 0 0 46px; } }
 .dm-video { max-width: 900px; margin: 0 auto 56px; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
 @media (max-width: 640px) { .dm-video { margin-bottom: 36px; } }
+/* 11 Nov: bigger audience titles on phones */
+@media (max-width: 760px) { .hp-aud-head { font-size: 34px; line-height: 1.04; } .hp-band2 .hp-aud-item .hp-tag { font-size: 14px; } }
+.hp-hero-v4 .hero-title { font-size: clamp(38px, 4.3vw, 62px); }
+.hp-hero-human strong { white-space: nowrap; }
