@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f44">
+<link rel="stylesheet" href="styles.css?v=f45">
 </head>
 <body>
 
@@ -135,6 +135,32 @@
     </div>
   </div>
 </section>
+
+<!-- ===== FOLD 5 - WHAT COACHES HAVE SAID ===== -->
+<section class="hp-fold vasc-fold fold-sep is-alt ccx-said">
+  <div class="container hp-wrap">
+    <h2 class="bigfold-title">What Coaches Have Said</h2>
+    <div class="ccx-said-wrap">
+      <button class="ccx-said-nav is-prev" type="button" aria-label="Previous">&lsaquo;</button>
+      <div class="ccx-said-track" id="ccxSaid">
+        <figure class="ccx-said-item"><img src="images/cc/said-1.jpg" alt="WhatsApp messages from a coach: You inspired me Drewe. That win was down to you. You got me connected with myself and delivered a team talk from the heart." loading="lazy"></figure>
+        <figure class="ccx-said-item"><img src="images/cc/said-2.jpg" alt="WhatsApp message from a coach: It has been a beautiful time since we had that chat in my office. Feel awake and alive mate!" loading="lazy"></figure>
+        <figure class="ccx-said-item"><img src="images/cc/said-3.jpg" alt="WhatsApp message from a coach: They were brave and aggressive. The two most important things for us!" loading="lazy"></figure>
+      </div>
+      <button class="ccx-said-nav is-next" type="button" aria-label="Next">&rsaquo;</button>
+    </div>
+  </div>
+</section>
+<script>
+  (function () {
+    var t = document.getElementById('ccxSaid'), w = t.parentNode;
+    function step(d) { var c = t.querySelector('.ccx-said-item'); t.scrollBy({ left: d * (c ? c.offsetWidth + 20 : 300), behavior: 'smooth' }); }
+    function upd() { w.classList.toggle('no-scroll', t.scrollWidth <= t.clientWidth + 2); }
+    w.querySelector('.is-prev').addEventListener('click', function () { step(-1); });
+    w.querySelector('.is-next').addEventListener('click', function () { step(1); });
+    window.addEventListener('resize', upd); window.addEventListener('load', upd); upd();
+  })();
+</script>
 
 <!-- ===== DEMO FORM POPUP ===== -->
 <div class="demo-modal" id="demoModal" aria-hidden="true">
