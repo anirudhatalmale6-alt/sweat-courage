@@ -4539,3 +4539,12 @@ a.team-photo { display: block; text-decoration: none; }
 .ccx-said-wrap.no-scroll .ccx-said-nav { display: none; }
 @media (max-width: 1200px) { .ccx-said-nav.is-prev { left: -8px; } .ccx-said-nav.is-next { right: -8px; } }
 @media (max-width: 900px) { .ccx-said-item { flex-basis: 78%; } }
+/* 18 Nov: PFA endorsement under the WhatsApp scroller */
+.ccx-endorse { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); margin-top: 56px; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; background: #050505; }
+.ccx-endorse-img { margin: 0; }
+.ccx-endorse-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ccx-endorse-quote { margin: 0; padding: 44px 46px; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.ccx-endorse-quote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.65; color: var(--text-white); margin: 0 0 26px; }
+.ccx-endorse-name { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.04em; color: var(--gold); }
+.ccx-endorse-role { display: block; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); opacity: 0.85; margin-top: 2px; }
+@media (max-width: 900px) { .ccx-endorse { grid-template-columns: 1fr; } .ccx-endorse-quote { padding: 30px 22px; } }
