@@ -4564,3 +4564,15 @@ a.team-photo { display: block; text-decoration: none; }
 @media (max-width: 1000px) { .ccc-cards.is-four { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 900px) { .ccc-phone img { max-width: 300px; } }
 @media (max-width: 560px) { .ccc-cards.is-four { grid-template-columns: 1fr; } .ccc-price-box { padding: 24px 22px; } }
+/* 18 Nov: PFA endorsement in the Connected Coach hero (replaces the stadium photo) */
+.ccx-hero .vasc-hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 48px; }
+.ccx-endorse.is-hero { margin-top: 0; }
+.ccx-endorse.is-hero .ccx-endorse-quote { padding: 28px 26px; }
+.ccx-endorse.is-hero blockquote { font-size: clamp(14px, 1.15vw, 16px); line-height: 1.6; margin-bottom: 18px; }
+.ccx-endorse.is-hero .ccx-endorse-name { font-size: 24px; }
+.ccx-endorse.is-hero .ccx-endorse-role { font-size: 11px; }
+@media (max-width: 900px) {
+  .ccx-hero .vasc-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .ccx-endorse.is-hero .ccx-endorse-img img { aspect-ratio: 4 / 3; object-position: center 20%; }
+  .ccx-endorse.is-hero blockquote { font-size: 16px; }
+}
