@@ -4581,3 +4581,10 @@ a.team-photo { display: block; text-decoration: none; }
 .ccx-cornell figure { margin: 0; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 4 / 5; }
 .ccx-cornell img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 560px) { .ccx-cornell { gap: 10px; margin-top: 26px; } }
+/* 19 Nov: hero PFA block stacked on every screen so all 3 people show (no side crop) */
+.ccx-hero .vasc-hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+.ccx-endorse.is-hero { grid-template-columns: 1fr; }
+.ccx-endorse.is-hero .ccx-endorse-img img { aspect-ratio: 16 / 10; height: auto; object-position: center 22%; }
+.ccx-endorse.is-hero .ccx-endorse-quote { padding: 26px 30px 28px; }
+@media (max-width: 900px) { .ccx-endorse.is-hero .ccx-endorse-img img { aspect-ratio: 4 / 3; } }
+@media (max-width: 900px) { .ccx-hero .vasc-hero-inner { grid-template-columns: 1fr; gap: 32px; } }
