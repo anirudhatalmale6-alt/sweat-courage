@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f50">
+<link rel="stylesheet" href="styles.css?v=f51">
 </head>
 <body>
 
@@ -18,7 +18,12 @@
       <li><a href="index.html">HOME</a></li>
       <li><a href="connected-coach.html">COURSE</a></li>
       <li><a href="connected-coach-community.html" class="active">COMMUNITY</a></li>
-      <li><a href="how-it-works.html">HOW IT WORKS</a></li>
+      <li class="nav-drop"><button type="button" class="nav-drop-toggle" aria-haspopup="true">VIDEO COURSES</button>
+        <ul class="nav-sub">
+          <li><a href="vasc-course.html">VASC</a></li>
+          <li><a href="https://sweatandcourage.teachable.com/l/pdp/the-athlete-unleashed" target="_blank" rel="noopener">The Athlete Unleashed</a></li>
+        </ul>
+      </li>
       <li><a href="https://www.drewebroughton.com" target="_blank" rel="noopener">FOUNDER</a></li>
       <li class="nav-cta-mobile-item"><a href="https://calendly.com/sweatandcourage/bring-sweat-courage-to-your-organization" class="nav-cta nav-cta-mobile" target="_blank" rel="noopener">BOOK A CLUB DEMO</a></li>
     </ul>
@@ -37,7 +42,7 @@
       <p class="ccc-title">Stay Connected.<br><span class="gold">Keep Your Edge.</span></p>
       <p class="ccx-lead">Ongoing coaching with Drewe Broughton and a community of coaches committed to understanding themselves and freeing their teams.</p>
       <p class="vasc-steps-line">Delivered through the Sweat &amp; Courage app.</p>
-      <a href="#join" class="btn-gold vasc-buy">Join The Community <span>&rarr;</span></a>
+      <a href="https://buy.stripe.com/9B68wPbQhb7w3GO1BEeUU1P" target="_blank" rel="noopener" class="btn-gold vasc-buy">Join The Community <span>&rarr;</span></a>
     </div>
     <figure class="ccc-phone"><img src="images/cc/community-phone.webp" alt="The Connected Coach community in the Sweat &amp; Courage app"></figure>
   </div>
@@ -70,20 +75,39 @@
   </div>
 </section>
 
+<!-- ===== WHAT COACHES SAY (videos) ===== -->
+<section class="hp-fold vasc-fold fold-sep is-alt ccx-said">
+  <div class="container hp-wrap">
+    <h2 class="bigfold-title">What Coaches Say</h2>
+    <div class="ccx-said-wrap ccx-vids">
+      <button class="ccx-said-nav is-prev" type="button" aria-label="Previous">&lsaquo;</button>
+      <div class="ccx-said-track">
+        <figure class="ccx-said-item ccx-vid is-wide"><video src="images/cc/vids/coach-vid-1.mp4" poster="images/cc/vids/coach-vid-1.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-2.mp4" poster="images/cc/vids/coach-vid-2.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-3.mp4" poster="images/cc/vids/coach-vid-3.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-4.mp4" poster="images/cc/vids/coach-vid-4.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-5.mp4" poster="images/cc/vids/coach-vid-5.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-6.mp4" poster="images/cc/vids/coach-vid-6.jpg" controls playsinline preload="none"></video></figure>
+      </div>
+      <button class="ccx-said-nav is-next" type="button" aria-label="Next">&rsaquo;</button>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOLD 4 - THE ONGOING RELATIONSHIP ===== -->
-<section class="hp-fold vasc-fold fold-sep is-alt ccc-join" id="join">
+<section class="hp-fold vasc-fold fold-sep ccc-join" id="join">
   <div class="container hp-wrap">
     <h2 class="hiw-q">A Place To Return To.<br><span class="gold">People To Keep Growing With.</span></h2>
     <p class="hiw-p">Stay close to the work, with regular coaching, honest conversations and support throughout your season.</p>
     <div class="ccc-price-box">
-      <p class="ccx-price">$150 <small>/ month</small></p>
-      <a href="#join" class="btn-gold vasc-buy">Join The Community <span>&rarr;</span></a>
+      <p class="ccx-price">$149 <small>/ month</small></p>
+      <a href="https://buy.stripe.com/9B68wPbQhb7w3GO1BEeUU1P" target="_blank" rel="noopener" class="btn-gold vasc-buy">Join The Community <span>&rarr;</span></a>
     </div>
   </div>
 </section>
 
 <!-- ===== FOLD 5 - KEEP THE CONNECTION (same as the Connected Coach page) ===== -->
-<section class="hp-fold vasc-fold fold-sep" id="paths">
+<section class="hp-fold vasc-fold fold-sep is-alt" id="paths">
   <div class="container hp-wrap">
     <p class="hp-kicker">Keep The Connection</p>
     <h2 class="hiw-q">The Learning Is <span class="gold">The Beginning.</span></h2>
@@ -92,8 +116,8 @@
         <p class="hp-kicker">For You</p>
         <h3>The Connected Coach Community.</h3>
         <p>Ongoing coaching, connection and support throughout the year.</p>
-        <p class="ccx-price">$150 <small>/ month</small></p>
-        <a href="#join" class="btn-gold">Join The Community <span>&rarr;</span></a>
+        <p class="ccx-price">$149 <small>/ month</small></p>
+        <a href="https://buy.stripe.com/9B68wPbQhb7w3GO1BEeUU1P" target="_blank" rel="noopener" class="btn-gold">Join The Community <span>&rarr;</span></a>
       </div>
       <div class="ccx-path is-club">
         <p class="hp-kicker">For Your Club</p>
@@ -105,6 +129,20 @@
   </div>
 </section>
 
+<script>
+  (function () {
+    document.querySelectorAll('.ccx-said-wrap').forEach(function (w) {
+      var t = w.querySelector('.ccx-said-track');
+      function step(d) { var c = t.querySelector('.ccx-said-item'); t.scrollBy({ left: d * (c ? c.offsetWidth + 20 : 300), behavior: 'smooth' }); }
+      function upd() { w.classList.toggle('no-scroll', t.scrollWidth <= t.clientWidth + 2); }
+      w.querySelector('.is-prev').addEventListener('click', function () { step(-1); });
+      w.querySelector('.is-next').addEventListener('click', function () { step(1); });
+      window.addEventListener('resize', upd); window.addEventListener('load', upd); upd();
+    });
+    var vids = document.querySelectorAll('.ccx-vids video');
+    vids.forEach(function (v) { v.addEventListener('play', function () { vids.forEach(function (o) { if (o !== v) o.pause(); }); }); });
+  })();
+</script>
 <!-- ===== DEMO FORM POPUP ===== -->
 <div class="demo-modal" id="demoModal" aria-hidden="true">
   <div class="demo-modal-box" role="dialog" aria-modal="true" aria-labelledby="demoTitle">

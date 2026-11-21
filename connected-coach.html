@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f50">
+<link rel="stylesheet" href="styles.css?v=f51">
 </head>
 <body>
 
@@ -18,7 +18,12 @@
       <li><a href="index.html">HOME</a></li>
       <li><a href="connected-coach.html" class="active">COURSE</a></li>
       <li><a href="connected-coach-community.html">COMMUNITY</a></li>
-      <li><a href="how-it-works.html">HOW IT WORKS</a></li>
+      <li class="nav-drop"><button type="button" class="nav-drop-toggle" aria-haspopup="true">VIDEO COURSES</button>
+        <ul class="nav-sub">
+          <li><a href="vasc-course.html">VASC</a></li>
+          <li><a href="https://sweatandcourage.teachable.com/l/pdp/the-athlete-unleashed" target="_blank" rel="noopener">The Athlete Unleashed</a></li>
+        </ul>
+      </li>
       <li><a href="https://www.drewebroughton.com" target="_blank" rel="noopener">FOUNDER</a></li>
       <li class="nav-cta-mobile-item"><a href="https://calendly.com/sweatandcourage/bring-sweat-courage-to-your-organization" class="nav-cta nav-cta-mobile" target="_blank" rel="noopener">BOOK A CLUB DEMO</a></li>
     </ul>
@@ -64,6 +69,14 @@
     <div class="ccx-cornell">
       <figure><img src="images/cc/purdue-drewe.jpg" alt="Drewe Broughton with Purdue Women&rsquo;s Soccer head coach Richard Moodie"></figure>
       <figure><img src="images/cc/purdue-big10-champions.jpg" alt="Purdue Women&rsquo;s Soccer, Big Ten Tournament Champions"></figure>
+    </div>
+    <figure class="ccx-quote">
+      <blockquote>&ldquo;Drewe really knows himself. He&rsquo;s helped me understand myself in a way I couldn&rsquo;t before.&rdquo;</blockquote>
+      <figcaption>Russell Martin &middot; Head Coach, Southampton FC</figcaption>
+    </figure>
+    <div class="ccx-cornell">
+      <figure><img src="images/cc/russell-drewe.jpg" alt="Drewe Broughton with Southampton FC head coach Russell Martin" class="ccx-top"></figure>
+      <figure><img src="images/cc/russell-wembley.jpg" alt="Russell Martin lifting the trophy at Wembley"></figure>
     </div>
   </div>
 </section>
@@ -127,8 +140,12 @@
       </ol>
     </div>
     <div class="ccx-course-cta">
-      <a href="https://calendly.com/sweatandcourage/15mins" class="btn-gold vasc-buy" target="_blank" rel="noopener">Book A Call With Drewe <span>&rarr;</span></a>
-      <p class="ccx-tbc">Course price to be confirmed.</p>
+      <p class="ccx-price">$489 <small>4 week course</small></p>
+      <p class="ccx-tbc">Four live Monday sessions with Drewe Broughton, in a small group of coaches.</p>
+      <div class="ccx-cta-row">
+        <a href="https://buy.stripe.com/4gM00jf2t5Ncels0xAeUU1O" target="_blank" rel="noopener" class="btn-gold vasc-buy">Book Your Place <span>&rarr;</span></a>
+        <a href="https://calendly.com/sweatandcourage/15mins" class="btn-outline vasc-buy" target="_blank" rel="noopener">Book A Call With Drewe <span>&rarr;</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -137,6 +154,18 @@
 <section class="hp-fold vasc-fold fold-sep is-alt ccx-said">
   <div class="container hp-wrap">
     <h2 class="bigfold-title">What Coaches Have Said</h2>
+    <div class="ccx-said-wrap ccx-vids">
+      <button class="ccx-said-nav is-prev" type="button" aria-label="Previous">&lsaquo;</button>
+      <div class="ccx-said-track">
+        <figure class="ccx-said-item ccx-vid is-wide"><video src="images/cc/vids/coach-vid-1.mp4" poster="images/cc/vids/coach-vid-1.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-2.mp4" poster="images/cc/vids/coach-vid-2.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-3.mp4" poster="images/cc/vids/coach-vid-3.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-4.mp4" poster="images/cc/vids/coach-vid-4.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-5.mp4" poster="images/cc/vids/coach-vid-5.jpg" controls playsinline preload="none"></video></figure>
+        <figure class="ccx-said-item ccx-vid"><video src="images/cc/vids/coach-vid-6.mp4" poster="images/cc/vids/coach-vid-6.jpg" controls playsinline preload="none"></video></figure>
+      </div>
+      <button class="ccx-said-nav is-next" type="button" aria-label="Next">&rsaquo;</button>
+    </div>
     <div class="ccx-said-wrap">
       <button class="ccx-said-nav is-prev" type="button" aria-label="Previous">&lsaquo;</button>
       <div class="ccx-said-track" id="ccxSaid">
@@ -152,12 +181,16 @@
 </section>
 <script>
   (function () {
-    var t = document.getElementById('ccxSaid'), w = t.parentNode;
-    function step(d) { var c = t.querySelector('.ccx-said-item'); t.scrollBy({ left: d * (c ? c.offsetWidth + 20 : 300), behavior: 'smooth' }); }
-    function upd() { w.classList.toggle('no-scroll', t.scrollWidth <= t.clientWidth + 2); }
-    w.querySelector('.is-prev').addEventListener('click', function () { step(-1); });
-    w.querySelector('.is-next').addEventListener('click', function () { step(1); });
-    window.addEventListener('resize', upd); window.addEventListener('load', upd); upd();
+    document.querySelectorAll('.ccx-said-wrap').forEach(function (w) {
+      var t = w.querySelector('.ccx-said-track');
+      function step(d) { var c = t.querySelector('.ccx-said-item'); t.scrollBy({ left: d * (c ? c.offsetWidth + 20 : 300), behavior: 'smooth' }); }
+      function upd() { w.classList.toggle('no-scroll', t.scrollWidth <= t.clientWidth + 2); }
+      w.querySelector('.is-prev').addEventListener('click', function () { step(-1); });
+      w.querySelector('.is-next').addEventListener('click', function () { step(1); });
+      window.addEventListener('resize', upd); window.addEventListener('load', upd); upd();
+    });
+    var vids = document.querySelectorAll('.ccx-vids video');
+    vids.forEach(function (v) { v.addEventListener('play', function () { vids.forEach(function (o) { if (o !== v) o.pause(); }); }); });
   })();
 </script>
 

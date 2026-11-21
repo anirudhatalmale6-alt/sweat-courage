@@ -4588,3 +4588,34 @@ a.team-photo { display: block; text-decoration: none; }
 .ccx-endorse.is-hero .ccx-endorse-quote { padding: 26px 30px 28px; }
 @media (max-width: 900px) { .ccx-endorse.is-hero .ccx-endorse-img img { aspect-ratio: 4 / 3; } }
 @media (max-width: 900px) { .ccx-hero .vasc-hero-inner { grid-template-columns: 1fr; gap: 32px; } }
+/* 21 Nov: Video Courses dropdown in the nav */
+.nav-drop { position: relative; }
+.nav-drop-toggle { background: none; border: 0; padding: 0; cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-light); text-transform: uppercase; white-space: nowrap; transition: color 0.3s; }
+.nav-drop-toggle::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 6px; vertical-align: middle; }
+.nav-drop-toggle:hover, .nav-drop-toggle.active, .nav-drop:focus-within .nav-drop-toggle { color: var(--gold); }
+.nav-sub { list-style: none; margin: 0; padding: 10px 0; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 210px; background: rgba(10,10,10,0.98); border: 1px solid rgba(255,255,255,0.1); border-top: 2px solid var(--gold); border-radius: 0 0 6px 6px; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s; z-index: 50; }
+.nav-drop::before { content: ''; position: absolute; left: -10px; right: -10px; top: 100%; height: 14px; }
+.nav-sub { margin-top: 12px; }
+.nav-drop:hover .nav-sub, .nav-drop:focus-within .nav-sub { opacity: 1; visibility: visible; }
+.nav-sub li a { display: block; padding: 10px 20px; text-align: left; }
+@media (max-width: 1100px) and (min-width: 861px) { .nav-drop-toggle { font-size: 11px; } }
+@media (max-width: 1010px) and (min-width: 861px) { .nav-drop-toggle { font-size: 10px; letter-spacing: 0.05em; } }
+@media (max-width: 860px) {
+  .nav-drop { text-align: center; }
+  .nav-drop-toggle { pointer-events: none; }
+  .nav-drop-toggle::after { display: none; }
+  .nav-sub { position: static; transform: none; opacity: 1; visibility: visible; background: none; border: 0; margin: 8px 0 0; padding: 0; min-width: 0; }
+  .nav-drop::before { display: none; }
+  .nav-sub li a { text-align: center; padding: 7px 0; font-size: 11px; color: var(--text-muted); }
+}
+/* 21 Nov: coach videos row (above the WhatsApps) */
+.ccx-vids { margin-bottom: 34px; }
+.ccx-vids .ccx-said-track { align-items: stretch; }
+.ccx-said-item.ccx-vid { flex-basis: calc((100% - 60px) / 4); background: #000; box-shadow: none; border: 1px solid rgba(255,255,255,0.1); }
+.ccx-vid video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: #000; }
+.ccx-vid.is-wide video { object-fit: contain; }
+@media (max-width: 900px) { .ccx-said-item.ccx-vid { flex-basis: 72%; } }
+/* 21 Nov: course price + buttons */
+.ccx-course-cta .ccx-price { margin: 0 0 6px; }
+.ccx-cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 22px; }
+.ccx-cornell img.ccx-top { object-position: center 18%; }
