@@ -4645,3 +4645,12 @@ a.team-photo { display: block; text-decoration: none; }
 @media (max-width: 900px) { .ccc-inside { grid-template-columns: 1fr; } .ccc-inside .ccc-phone img { max-width: 280px; } .ccc-intro video { max-width: 340px; } }
 @media (max-width: 560px) { .ccc-inside .ccc-cards { grid-template-columns: 1fr; } }
 .ccx-buy-m { font-weight: inherit; }
+/* 23 Nov: community What's Inside = 6 image tiles (2 rows of 3) + phone beside the "why" fold */
+.ccc-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 22px; }
+.ccc-tile { margin: 0; }
+.ccc-tile img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
+.ccc-tile figcaption { font-size: 15px; line-height: 1.65; color: var(--text-light); margin-top: 14px; }
+.ccc-why { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.ccc-why .ccc-phone img { max-width: 320px; }
+@media (max-width: 900px) { .ccc-tiles { grid-template-columns: 1fr 1fr; } .ccc-why { grid-template-columns: 1fr; } .ccc-why .ccc-phone img { max-width: 260px; } }
+@media (max-width: 560px) { .ccc-tiles { grid-template-columns: 1fr; } }
