@@ -4619,3 +4619,29 @@ a.team-photo { display: block; text-decoration: none; }
 .ccx-course-cta .ccx-price { margin: 0 0 6px; }
 .ccx-cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 22px; }
 .ccx-cornell img.ccx-top { object-position: center 18%; }
+/* 23 Nov: course month picker */
+.ccx-book { max-width: 760px; margin-left: auto; margin-right: auto; }
+.ccx-book .hp-kicker { margin-bottom: 4px; }
+.ccx-book .ccx-price { font-size: clamp(64px, 7vw, 88px); margin: 0; }
+.ccx-meta { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-light); margin: 6px 0 18px; }
+.ccx-when { font-family: 'Montserrat', sans-serif; font-size: clamp(16px, 1.6vw, 19px); font-weight: 700; color: var(--text-white); margin-bottom: 6px; }
+.ccx-choose { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: var(--text-white); text-align: left; margin: 30px 0 12px; }
+.ccx-months { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left; }
+.ccx-month { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; background: var(--bg-tertiary); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.ccx-month:hover { border-color: rgba(200,150,46,0.6); }
+.ccx-month input { accent-color: var(--gold); width: 18px; height: 18px; flex: 0 0 auto; margin: 0; }
+.ccx-month span { display: flex; flex-direction: column; }
+.ccx-month strong { font-family: 'Montserrat', sans-serif; font-size: 15px; color: var(--text-white); }
+.ccx-month small { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+.ccx-month:has(input:checked) { border-color: var(--gold); background: rgba(200,150,46,0.12); }
+.ccx-book .ccx-cta-row { margin-top: 26px; }
+@media (max-width: 560px) { .ccx-months { grid-template-columns: 1fr; } .ccx-book .ccx-cta-row a { width: 100%; justify-content: center; text-align: center; } }
+/* 23 Nov: community intro video in the hero, phone moved beside the 4 cards */
+.ccc-intro { margin: 0; display: flex; justify-content: center; }
+.ccc-intro video { width: 100%; max-width: 380px; aspect-ratio: 3 / 4; object-fit: cover; background: #000; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 24px 50px rgba(0,0,0,0.5); display: block; }
+.ccc-inside { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.ccc-inside .ccc-cards { grid-template-columns: 1fr 1fr; margin: 0; }
+.ccc-inside .ccc-phone img { max-width: 340px; }
+@media (max-width: 900px) { .ccc-inside { grid-template-columns: 1fr; } .ccc-inside .ccc-phone img { max-width: 280px; } .ccc-intro video { max-width: 340px; } }
+@media (max-width: 560px) { .ccc-inside .ccc-cards { grid-template-columns: 1fr; } }
+.ccx-buy-m { font-weight: inherit; }

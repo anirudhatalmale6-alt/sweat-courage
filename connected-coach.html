@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f51">
+<link rel="stylesheet" href="styles.css?v=f52">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
       <p class="vasc-steps-line">By Drewe Broughton &middot; Part of Sweat &amp; Courage</p>
       <p class="ccx-headline">Lead without <span class="gold">losing yourself.</span></p>
       <p class="ccx-lead">Understand your fear. Rediscover your instinct. Connect with your players.</p>
-      <a href="https://calendly.com/sweatandcourage/15mins" class="btn-gold vasc-buy" target="_blank" rel="noopener">Book A Call With Drewe <span>&rarr;</span></a>
+      <a href="https://calendly.com/sweatandcourage/15mins" class="btn-gold vasc-buy" target="_blank" rel="noopener">Discuss With Drewe <span>&rarr;</span></a>
     </div>
     <div class="ccx-endorse is-hero">
       <figure class="ccx-endorse-img"><img src="images/cc/pfa-graduation.jpg" alt="Drewe Broughton with PFA Business School graduates"></figure>
@@ -139,14 +139,41 @@
       <li><span class="ccx-mod-n">08</span><span class="ccx-mod-t">Sweat &amp; Courage</span></li>
       </ol>
     </div>
-    <div class="ccx-course-cta">
-      <p class="ccx-price">$489 <small>4 week course</small></p>
-      <p class="ccx-tbc">Four live Monday sessions with Drewe Broughton, in a small group of coaches.</p>
+    <div class="ccx-course-cta ccx-book" id="book">
+      <p class="hp-kicker">The Connected Coach</p>
+      <p class="ccx-price">$489</p>
+      <p class="ccx-meta">Per Coach &middot; Four Weeks &middot; Eight Modules</p>
+      <p class="ccx-when">Four live Mondays at 6.30pm UK / 1.30pm ET</p>
+      <p class="ccx-tbc">60 minutes live with Drewe in a small group, plus one recorded module each week.</p>
+      <p class="ccx-choose">Choose your course month</p>
+      <div class="ccx-months" role="radiogroup" aria-label="Course month">
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="February-2027" data-name="February" checked><span><strong>February 2027</strong><small>1, 8, 15 and 22 February</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="March-2027" data-name="March"><span><strong>March 2027</strong><small>1, 8, 15 and 22 March</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="April-2027" data-name="April"><span><strong>April 2027</strong><small>5, 12, 19 and 26 April</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="May-2027" data-name="May"><span><strong>May 2027</strong><small>3, 10, 17 and 24 May</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="June-2027" data-name="June"><span><strong>June 2027</strong><small>7, 14, 21 and 28 June</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="July-2027" data-name="July"><span><strong>July 2027</strong><small>5, 12, 19 and 26 July</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="August-2027" data-name="August"><span><strong>August 2027</strong><small>2, 9, 16 and 23 August</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="September-2027" data-name="September"><span><strong>September 2027</strong><small>6, 13, 20 and 27 September</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="October-2027" data-name="October"><span><strong>October 2027</strong><small>4, 11, 18 and 25 October</small></span></label>
+        <label class="ccx-month"><input type="radio" name="ccmonth" value="November-2027" data-name="November"><span><strong>November 2027</strong><small>1, 8, 15 and 22 November</small></span></label>
+      </div>
       <div class="ccx-cta-row">
-        <a href="https://buy.stripe.com/4gM00jf2t5Ncels0xAeUU1O" target="_blank" rel="noopener" class="btn-gold vasc-buy">Book Your Place <span>&rarr;</span></a>
-        <a href="https://calendly.com/sweatandcourage/15mins" class="btn-outline vasc-buy" target="_blank" rel="noopener">Book A Call With Drewe <span>&rarr;</span></a>
+        <a id="ccxBuy" href="https://buy.stripe.com/4gM00jf2t5Ncels0xAeUU1O?client_reference_id=February-2027" target="_blank" rel="noopener" class="btn-gold vasc-buy"><span>Book My <b class="ccx-buy-m">February</b> Place</span> <span>&rarr;</span></a>
+        <a href="https://calendly.com/sweatandcourage/15mins" class="btn-outline vasc-buy" target="_blank" rel="noopener">Discuss With Drewe <span>&rarr;</span></a>
       </div>
     </div>
+<script>
+  (function () {
+    var buy = document.getElementById('ccxBuy'), base = buy.href.split('?')[0];
+    document.querySelectorAll('.ccx-month input').forEach(function (r) {
+      r.addEventListener('change', function () {
+        buy.href = base + '?client_reference_id=' + r.value;
+        buy.querySelector('.ccx-buy-m').textContent = r.getAttribute('data-name');
+      });
+    });
+  })();
+</script>
   </div>
 </section>
 
