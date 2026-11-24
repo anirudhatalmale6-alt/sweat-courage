@@ -4663,3 +4663,8 @@ a.team-photo { display: block; text-decoration: none; }
 .ccx-format-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
 .ccx-format-list strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
 @media (max-width: 560px) { .ccx-format { padding: 20px 18px; } }
+/* 24 Nov: walkthrough video full width at the very top of the homepage */
+.hp-topvid { margin-top: 70px; background: #000; line-height: 0; }
+.hp-topvid video { width: 100%; aspect-ratio: 16 / 9; max-height: calc(100vh - 70px); display: block; background: #000; object-fit: contain; }
+.hp-topvid + .hero { margin-top: 0; }
+@media (max-width: 860px) { .hp-topvid { margin-top: 60px; } .hp-topvid video { max-height: none; } }
