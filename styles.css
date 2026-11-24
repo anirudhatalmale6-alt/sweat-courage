@@ -4668,3 +4668,23 @@ a.team-photo { display: block; text-decoration: none; }
 .hp-topvid video { width: 100%; aspect-ratio: 16 / 9; max-height: calc(100vh - 70px); display: block; background: #000; object-fit: contain; }
 .hp-topvid + .hero { margin-top: 0; }
 @media (max-width: 860px) { .hp-topvid { margin-top: 60px; } .hp-topvid video { max-height: none; } }
+/* 24 Nov (later): walkthrough video sits in the hero where the phone image was; no full-width top video */
+.hp-hero-vid { display: flex; align-items: center; justify-content: center; padding: 40px 48px 40px 10px; background: var(--bg-primary); }
+.hp-hero-vid video { width: 100%; aspect-ratio: 16 / 9; display: block; background: #000; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 24px 60px rgba(0,0,0,0.55); }
+@media (max-width: 860px) { .hp-hero-vid { order: -1; padding: 0; } .hp-hero-vid video { border-radius: 0; border: 0; box-shadow: none; } }
+/* 24 Nov: coach testimonial slider (Course page + homepage) */
+.ts-slider { position: relative; max-width: 900px; margin: 0 auto; }
+.ts-slider .ccx-quote { margin-top: 0; }
+.ts-slide[hidden] { display: none; }
+.ts-slide.is-on { animation: tsIn 0.35s ease; }
+@keyframes tsIn { from { opacity: 0; } to { opacity: 1; } }
+.ts-nav { position: absolute; top: 260px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); background: rgba(10,10,10,0.85); color: var(--gold); font-size: 30px; line-height: 1; cursor: pointer; z-index: 2; }
+.ts-nav:hover { border-color: var(--gold); }
+.ts-nav.is-prev { left: -70px; }
+.ts-nav.is-next { right: -70px; }
+.ts-dots { display: flex; justify-content: center; gap: 10px; margin-top: 26px; }
+.ts-dot { width: 10px; height: 10px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,0.25); cursor: pointer; }
+.ts-dot.is-on { background: var(--gold); }
+.hp-testis { padding-top: 70px; padding-bottom: 80px; }
+@media (max-width: 1060px) { .ts-nav.is-prev { left: -6px; } .ts-nav.is-next { right: -6px; } }
+@media (max-width: 560px) { .ts-nav { top: auto; bottom: -8px; width: 40px; height: 40px; font-size: 26px; } .ts-nav.is-prev { left: 0; } .ts-nav.is-next { right: 0; } }
