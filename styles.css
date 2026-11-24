@@ -4654,3 +4654,12 @@ a.team-photo { display: block; text-decoration: none; }
 .ccc-why .ccc-phone img { max-width: 320px; }
 @media (max-width: 900px) { .ccc-tiles { grid-template-columns: 1fr 1fr; } .ccc-why { grid-template-columns: 1fr; } .ccc-why .ccc-phone img { max-width: 260px; } }
 @media (max-width: 560px) { .ccc-tiles { grid-template-columns: 1fr; } }
+/* 24 Nov: course format block under the price */
+.ccx-format { text-align: left; margin: 26px 0 22px; padding: 26px 28px; border: 1px solid rgba(200,150,46,0.4); background: rgba(200,150,46,0.06); border-radius: 8px; }
+.ccx-format-head { font-family: 'Bebas Neue', sans-serif; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: var(--text-white); margin: 0 0 16px; }
+.ccx-format-head .gold { color: var(--gold); }
+.ccx-format-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.ccx-format-list li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.6; color: var(--text-light); }
+.ccx-format-list li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
+.ccx-format-list strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; }
+@media (max-width: 560px) { .ccx-format { padding: 20px 18px; } }
