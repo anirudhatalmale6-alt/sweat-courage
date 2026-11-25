@@ -4688,3 +4688,11 @@ a.team-photo { display: block; text-decoration: none; }
 .hp-testis { padding-top: 70px; padding-bottom: 80px; }
 @media (max-width: 1060px) { .ts-nav.is-prev { left: -6px; } .ts-nav.is-next { right: -6px; } }
 @media (max-width: 560px) { .ts-nav { top: auto; bottom: -8px; width: 40px; height: 40px; font-size: 26px; } .ts-nav.is-prev { left: 0; } .ts-nav.is-next { right: 0; } }
+/* 25 Nov: community hero text heading (replaces the logo image) + contained slide photo */
+.ccc-h1 { margin: 0 0 18px; font-weight: 400; }
+.ccc-h1 .hp-kicker { display: block; margin-bottom: 8px; }
+.ccc-h1-sub { display: block; font-family: 'Montserrat', sans-serif; font-size: clamp(14px, 1.3vw, 17px); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-white); }
+.ccc-hero .ccx-lead { margin-bottom: 14px; }
+.ccc-hero .ccc-lead2 { margin-bottom: 26px; }
+.ccx-cornell figure:has(img.ccx-contain) { background: #0d0d0d; }
+.ccx-cornell img.ccx-contain { object-fit: contain; }
