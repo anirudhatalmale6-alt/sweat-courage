@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=f57">
+<link rel="stylesheet" href="styles.css?v=f58">
 </head>
 <body>
 
@@ -98,6 +98,45 @@
     </div>
   </div>
 </section>
+
+<!-- ===== MILLER TESTIMONIALS ===== -->
+<section class="partner-testis">
+  <div class="container">
+    <h2 class="partner-testis-title">What They Say</h2>
+    <div class="ts-slider ts-people" aria-roledescription="carousel" aria-label="Testimonials">
+      <button type="button" class="ts-nav is-prev" aria-label="Previous">&lsaquo;</button>
+      <div class="ts-slide ts-person is-on" role="group" aria-roledescription="slide" aria-label="1 of 1">
+        <figure class="ts-photo"><img src="images/miller/phil-jones.jpg" alt="Phil Jones" loading="lazy"></figure>
+        <figure class="ts-words"><blockquote>&ldquo;Thanks Drewe, you came along at a vital time for me, your support is invaluable. I have seen so many &lsquo;experts&rsquo; in my career but always struggled to relate and never had the kind of breakthrough I needed.&rdquo;</blockquote><figcaption><span class="ts-name">Phil Jones</span><span class="ts-role">Former Manchester United &amp; England Footballer</span></figcaption></figure>
+      </div>
+      <button type="button" class="ts-nav is-next" aria-label="Next">&rsaquo;</button>
+      <div class="ts-dots"><button type="button" class="ts-dot is-on" aria-label="Show 1"></button></div>
+    </div>
+<script>
+  (function () {
+    document.querySelectorAll('.ts-slider').forEach(function (el) {
+      var s = el.querySelectorAll('.ts-slide'), d = el.querySelectorAll('.ts-dot'), n = 0;
+      if (s.length < 2) el.classList.add('is-single');
+      function go(k) {
+        n = (k + s.length) % s.length;
+        s.forEach(function (x, i) { x.classList.toggle('is-on', i === n); x.hidden = i !== n; });
+        d.forEach(function (x, i) { x.classList.toggle('is-on', i === n); });
+      }
+      el.querySelector('.is-prev').addEventListener('click', function () { go(n - 1); });
+      el.querySelector('.is-next').addEventListener('click', function () { go(n + 1); });
+      d.forEach(function (x, i) { x.addEventListener('click', function () { go(i); }); });
+      var x0 = null;
+      el.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      el.addEventListener('touchend', function (e) {
+        if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+        if (Math.abs(dx) > 40) go(n + (dx < 0 ? 1 : -1));
+      });
+    });
+  })();
+</script>
+  </div>
+</section>
+<!-- ===== /MILLER TESTIMONIALS ===== -->
 
 <!-- ===== DOWNLOAD CTA ===== -->
 <section class="partner-download-cta">

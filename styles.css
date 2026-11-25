@@ -4696,3 +4696,21 @@ a.team-photo { display: block; text-decoration: none; }
 .ccc-hero .ccc-lead2 { margin-bottom: 26px; }
 .ccx-cornell figure:has(img.ccx-contain) { background: #0d0d0d; }
 .ccx-cornell img.ccx-contain { object-fit: contain; }
+/* 25 Nov: Miller page testimonials (photo + quote per person) */
+.partner-testis { padding: 80px 0; background: var(--bg-primary); }
+.partner-testis-title { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); letter-spacing: 0.03em; text-transform: uppercase; color: var(--gold); text-align: center; margin: 0 0 40px; }
+.ts-people { max-width: 920px; }
+.ts-person.is-on { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 44px; align-items: center; }
+.ts-photo { margin: 0; }
+.ts-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; display: block; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); }
+.ts-words { margin: 0; }
+.ts-words blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(19px, 2vw, 25px); line-height: 1.5; color: var(--text-white); margin: 0 0 22px; }
+.ts-name { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.04em; color: var(--gold); }
+.ts-role { display: block; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); margin-top: 2px; }
+.ts-people .ts-nav { top: 50%; transform: translateY(-50%); }
+.ts-slider.is-single .ts-nav, .ts-slider.is-single .ts-dots { display: none; }
+@media (max-width: 760px) {
+  .ts-person.is-on { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .ts-photo { max-width: 240px; margin: 0 auto; }
+  .ts-people .ts-nav { top: 150px; transform: none; }
+}
